@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>FUTEBOL</Text>
+      <Text>FUTEBOL VAI TOMAR NO CU PEDRO KKK</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,7 +13,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ff0',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
