@@ -1,20 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import HomeApp from './src/telasApp/Tela-Home';
+
+//BAIXAR A FONTE NO GOOGLE-FONTS: Inter Regular 400 e Black 900;
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>FUTEBOL VAI TOMAR NO CU PEDRO KKK</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <HomeApp/>
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
