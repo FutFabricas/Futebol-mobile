@@ -1,8 +1,8 @@
-import React from 'react';
-import HomeApp from './src/telasApp/Tela-Home';
+import 'intl';
+import 'intl/locale-data/jsonp/pt-BR';
 
-//BAIXAR A FONTE NO GOOGLE-FONTS: Inter Regular 400 e Black 900;
+import Servicos from './src/telas/Servicos'; //nao precisa colocar o /index
 
 export default function App() {
-  return <HomeApp/>
+  return <Servicos />;
 }
