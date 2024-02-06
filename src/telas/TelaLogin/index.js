@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { styles } from './estilos';
 
 
@@ -18,7 +18,7 @@ export default function TelaLogin() {
         placeholderTextColor="#888"
       />
 
-      <TextInput
+      <TextInput           
         style={styles.input}
         placeholder="Senha"
         placeholderTextColor="#888"

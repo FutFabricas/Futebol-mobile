@@ -50,11 +50,11 @@ const servicos = [
 ];
 
 export default function Servicos(){ //esse export default só pode ser utilizado uma vez por arquivo
-    return <TelaPadrao>
+    return <>
             <FlatList
             data={servicos}
             renderItem={({item}) => <Item {... item} />}
             keyExtractor={({id}) => String(id)}
         />
-    </TelaPadrao>
+    </>
 }
