@@ -1,8 +1,8 @@
 import React from 'react';        //precisamos importar pq a gente precisa dizer ao react que a gente vai usar tag no javascript
 
-import {StatusBar, SafeAreaView, FlatList, KeyboardAvoidingView, Platform } from 'react-native'; //o 'Text' é pra usar a tag e o 'SafeAreaView' é pra nada ficar na barra super do Ios e 'StatusBar' resolve no Android
+import { FlatList } from 'react-native'; //o 'Text' é pra usar a tag e o 'SafeAreaView' é pra nada ficar na barra super do Ios e 'StatusBar' resolve no Android
 import Item from './Item';
-import estilosGlobal from '../../estilos';
+import TelaPadrao from '../../componentes/TelaPadrao';
 
 const servicos = [
     {
@@ -47,21 +47,14 @@ const servicos = [
         preco: 15,
         descricao: "Goleiro"
     }
-    
 ];
 
 export default function Servicos(){ //esse export default só pode ser utilizado uma vez por arquivo
-    return <SafeAreaView style={estilosGlobal.preencher}>
-        <StatusBar />
-        <KeyboardAvoidingView
-        behavior={Platform.OS == "ios" ? "padding" : "height"}
-        style={estilosGlobal.preencher}
-        >
+    return <TelaPadrao>
             <FlatList
             data={servicos}
             renderItem={({item}) => <Item {... item} />}
             keyExtractor={({id}) => String(id)}
-        /> 
-        </KeyboardAvoidingView>
-    </SafeAreaView>
-}       
+        />
+    </TelaPadrao>
+}

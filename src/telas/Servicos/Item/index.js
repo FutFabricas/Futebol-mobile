@@ -54,7 +54,7 @@ const inverteExpandir = () => {
             }</Text>
             </View>
                 </View>
-                    <Botao valor='MARCAR FUT!' acao={() => {}}/>
+                    <Botao valor='CONFIRMAR PRESENÇA!' acao={() => {}}/>
                 </View>
     }
     <View style={estilos.divisor}/>
