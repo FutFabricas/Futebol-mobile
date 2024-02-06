@@ -18,11 +18,11 @@ export const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    borderBottomWidth: 1,  // Adiciona uma borda apenas na parte inferior
-    borderColor: '#92C357',  // Cor da borda
+    borderBottomWidth: 1,
+    borderColor: '#92C357',
     marginBottom: 50,
     paddingHorizontal: 10,
-    color: '#FFF',  // Cor do texto
+    color: '#FFF',
   },
   botao: {
     height: 40,
@@ -35,5 +35,18 @@ export const styles = StyleSheet.create({
   textoBotao: {
     color: '#FFF',
     fontFamily: 'Roboto',
+  },
+  botaoVoltar: {
+    position: 'absolute',
+    top: 20,
+    left: 20,
+    padding: 10,
+  },
+  icone: {
+    position: 'absolute',
+    top: 20,
+    right: 20,
+    width: 32,
+    height: 32,
   },
 });
