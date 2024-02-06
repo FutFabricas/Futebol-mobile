@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import { styles } from './estilos';
 
+
 export default function TelaLogin() {
   return (
     <View style={styles.container}>
@@ -9,7 +10,7 @@ export default function TelaLogin() {
         <Text style={{ color: '#FFF' }}> voltar</Text>
       </TouchableOpacity>
 
-      <Text style={styles.titulo}>BEM-VINDO</Text>
+      <Text style={styles.titulo}>BEM-VINDO, CAPITÃO!</Text>
 
       <TextInput
         style={styles.input}
@@ -28,9 +29,9 @@ export default function TelaLogin() {
         <Text style={styles.textoBotao}>Entrar</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.icone} onPress={() => console.log('Ícone Pressionado')}>
+      {/* <TouchableOpacity style={styles.icone} onPress={() => console.log('Ícone Pressionado')}>
         <Image source={require('../../../assets/icondois.png')} style={{ width: 32, height: 32 }} />
-      </TouchableOpacity>
+      </TouchableOpacity> */} 
     </View>
   );
 };
