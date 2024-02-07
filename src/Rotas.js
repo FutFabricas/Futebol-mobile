@@ -12,28 +12,29 @@ const Tab = createBottomTabNavigator();
 export default function Rotas() {
     return <NavigationContainer>
         <Tab.Navigator
-        tabBarOptions={{
+        tabBarOptions={{ 
             activeTintColor: cores.claro,
             inactiveTintColor: 'green',
-            activeBackgroundColor: '#6FAF46',
+            activeBackgroundColor: 'green',
             inactiveBackgroundColor: '#6FAF46',
             style: {
-                height: 70,
+                height: 10,
             },
             labelStyle: {
                 width: '100%',
-                flex: 1,
+                flex: 8,
                 fontWeight: 'bold',
                 fontSize: 18,
                 lineHeight: 15,
-                marginTop: 3,
-                paddingTop: 2,
+                marginTop: 4,
+                paddingTop: 11,
                 backgroundColor: '#6FAF46'
-            }
+            },
+            keyboardHidesTabBar: true
         }}>
-            <Tab.Screen name="Login" component={TelaLogin} options={{ headerShown: false }}/>
-            <Tab.Screen name="Carrinho" component={Carrinho} options={{ headerShown: false }}/>
-            <Tab.Screen name="Serviços" component={Servicos} options={{ headerShown: false }}/>
+            <Tab.Screen name="Fut" component={TelaLogin} options={{ headerShown: false}}/>
+            <Tab.Screen name="Confirmados" component={Carrinho} options={{ headerShown: false }}/>
+            <Tab.Screen name="Detalhes" component={Servicos} options={{ headerShown: false }}/>
         </Tab.Navigator>
     </NavigationContainer>
 }

@@ -11,7 +11,7 @@ const servicos = [
         login: "João Carlo",
         preco: 15,
         descricao: "Atacante",
-        quantidade: 2
+        quantidade: 1
     },
     {
         id: 2,
