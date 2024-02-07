@@ -16,6 +16,14 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": ["node_modules/@expo-google-fonts/inter/Inter_100Thin.ttf"]
+        }
+      ]
+    ]
   }
 }
