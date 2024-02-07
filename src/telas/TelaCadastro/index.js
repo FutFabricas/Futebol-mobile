@@ -19,7 +19,7 @@ export default function TelaCadastro() {
         <Text style={{ color: '#FFF' }}> voltar</Text>
       </TouchableOpacity>
 
-      <Text style={estilosCadastro.titulo}>Agendar FUT!</Text>
+      <Text style={estilosCadastro.titulo}>Agende FUT!</Text>
 
       <TextInput
         style={estilosCadastro.input}

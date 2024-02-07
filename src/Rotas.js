@@ -1,10 +1,11 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
 import TelaLogin from "././telas/TelaLogin";
 import Carrinho from "././telas/Carrinho";
 import Servicos from "././telas/Servicos";
 import TelaCadastro from "./telas/TelaCadastro";
+
+       
 
 import { cores } from './estilos'
 

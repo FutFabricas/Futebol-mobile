@@ -8,8 +8,11 @@ import TelaCadastro from '../TelaCadastro';
 export default function TelaLogin() {
   const navigation = useNavigation();
   const handleEntrar = () => {
-    navigation.navigate(TelaCadastro);
+    navigation.navigate('TelaCadastro');
+    console.log('Botão Entrar Pressionado');
   };
+  
+  
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.botaoVoltar} onPress={() => console.log('Botão Voltar Pressionado')}>
@@ -34,9 +37,9 @@ export default function TelaLogin() {
       <TouchableOpacity style={styles.botao} onPress={handleEntrar}>
         <Text style={styles.textoBotao}>Entrar</Text>
       </TouchableOpacity>
-      <View>
+      
         <Button title="Navegar" onPress={handleEntrar}/>
-      </View>
+      
 
       {/* <TouchableOpacity style={styles.icone} onPress={() => console.log('Ícone Pressionado')}>
         <Image source={require('../../../assets/icondois.png')} style={{ width: 32, height: 32 }} />
