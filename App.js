@@ -1,17 +1,19 @@
 import 'intl';
 import 'intl/locale-data/jsonp/pt-BR';
+import { View } from 'react-native';
 //Importei as Fontes do projeto Direto do Projeto
-import {useFonts, Inter_900Black, Inter_400Regular} from '@expo-google-fonts/inter';
 import Servicos from './src/telas/Servicos'; //nao precisa colocar o /index
 import Home from './src/telas/Home';
+import { useFonts, Inter_400Regular, Inter_900Black } from '@expo-google-fonts/inter';
 
 export default function App() {
-  const [FonteProjeto]= useFonts({
-    'InterPadrao': Inter_400Regular,
-    'InterTitulo': Inter_900Black,
-});
-if (!FonteProjeto) {
-  return <View/>}
+  const [fontesProjeto] = useFonts({
+    'InterRegular': Inter_400Regular,
+    'InterTitulos': Inter_900Black,
+  });
 
+  if (!fontesProjeto) {
+    return <View/>
+  }
   return <Home/>;
 }

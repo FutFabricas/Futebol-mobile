@@ -12,7 +12,7 @@ export default StyleSheet.create  ({
     titulo: {
         color: '#FFFFFF',
         fontSize: 20,
-        fontWeight: "900",
+        fontFamily: 'InterTitulos',
         textAlign: 'center',
 
     }

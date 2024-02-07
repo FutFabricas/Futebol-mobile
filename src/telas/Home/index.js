@@ -1,11 +1,7 @@
 import { View, Text, SafeAreaView,StatusBar} from "react-native";
 import estilos from '../Home/estilos';
-import { useFonts,Inter_400Regular,Inter_900Black  } from "@expo-google-fonts/inter";
-
-
 
 export default function Home(){
-    
     return (
     <SafeAreaView>
         <StatusBar/>
