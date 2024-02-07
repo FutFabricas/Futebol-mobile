@@ -38,6 +38,8 @@ export default function Rotas() {
             <Tab.Screen name="Cadastro" component={TelaCadastro} options={{ headerShown: false}}/>
             <Tab.Screen name="Confirmados" component={Carrinho} options={{ headerShown: false }}/>
             <Tab.Screen name="Data/Hora" component={Servicos} options={{ headerShown: false }}/>
+            <Tab.Screen name="TelaLogin" component={TelaLogin}/>
+            <Tab.Screen name="TelaCadastro" component={TelaCadastro}/>
             
         </Tab.Navigator>
     </NavigationContainer>

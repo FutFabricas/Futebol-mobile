@@ -12,7 +12,6 @@ export default function TelaLogin() {
     console.log('Botão Entrar Pressionado');
   };
   
-  
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.botaoVoltar} onPress={() => console.log('Botão Voltar Pressionado')}>
