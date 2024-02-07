@@ -15,10 +15,10 @@ export default function Rotas() {
     return <NavigationContainer>
         <Tab.Navigator
         tabBarOptions={{ 
-            activeTintColor: cores.claro,
-            inactiveTintColor: 'green',
-            activeBackgroundColor: 'green',
-            inactiveBackgroundColor: '#6FAF46',
+            activeTintColor: 'white',
+            inactiveTintColor: '#747474',
+            activeBackgroundColor: '#6FAF46',
+            inactiveBackgroundColor: '#242323',
             style: {
                 height: 10,
             },
@@ -28,9 +28,9 @@ export default function Rotas() {
                 fontWeight: 'bold',
                 fontSize: 16,
                 lineHeight: 15,
-                marginTop: 4,
+                marginTop: 1,
                 paddingTop: 11,
-                backgroundColor: '#6FAF46'
+                backgroundColor: '#242323'
             },
             keyboardHidesTabBar: true
         }}>
@@ -38,8 +38,8 @@ export default function Rotas() {
             <Tab.Screen name="Cadastro" component={TelaCadastro} options={{ headerShown: false}}/>
             <Tab.Screen name="Confirmados" component={Carrinho} options={{ headerShown: false }}/>
             <Tab.Screen name="Data/Hora" component={Servicos} options={{ headerShown: false }}/>
-            <Tab.Screen name="TelaLogin" component={TelaLogin}/>
-            <Tab.Screen name="TelaCadastro" component={TelaCadastro}/>
+            {/* <Tab.Screen name="TelaLogin" component={TelaLogin}/>
+            <Tab.Screen name="TelaCadastro" component={TelaCadastro}/> */}
             
         </Tab.Navigator>
     </NavigationContainer>
