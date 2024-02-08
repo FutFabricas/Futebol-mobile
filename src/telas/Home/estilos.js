@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 
 export const styles = StyleSheet.create  ({
+
     container: {
         flex: 1,
         backgroundColor: '#242323',
@@ -10,9 +11,39 @@ export const styles = StyleSheet.create  ({
 
     },
 
-    home: {
-        margin: 0,
-        padding: 0,
+    icons_home:{
+        justifyContent: 'center',
+        alignItems: 'center'
+
+
+    },
+
+    botao_home_topo:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingVertical: 8,
+        paddingHorizontal: 28,
+        
+        
+    },
+
+    texto_botao_home_topo:{
+        color: '#FFFFFF',
+        fontFamily: 'InterTitulos',
+    },
+
+    home_topo:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        backgroundColor: '#242323',
+        
+    },  
+
+    home_topo_titulo: {
+        backgroundColor: '#242323',
+        textAlign: 'center',
+        fontFamily: 'InterTitulos',
+        
        
     },
 
@@ -21,6 +52,7 @@ export const styles = StyleSheet.create  ({
         fontSize: 20,
         fontFamily: 'InterTitulos',
         textAlign: 'center',
+        marginVertical: 40
 
     }, 
 
