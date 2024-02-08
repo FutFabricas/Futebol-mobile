@@ -7,13 +7,17 @@ import TelaCadastro from '../TelaCadastro';
 
 export default function TelaLogin() {
   const navigation = useNavigation();
-  const handleEntrar = () => {
-    navigation.navigate('TelaCadastro');
-    console.log('Botão Entrar Pressionado');
+
+  const irParaTelaSecundaria = () => {
+    navigation.navigate(TelaCadastro);
   };
   
   return (
+      
+
+    
     <View style={styles.container}>
+      <Button title="Navegaar" onPress={irParaTelaSecundaria}/>
       <TouchableOpacity style={styles.botaoVoltar} onPress={() => console.log('Botão Voltar Pressionado')}>
         <Text style={{ color: '#FFF' }}> voltar</Text>
       </TouchableOpacity>
@@ -33,12 +37,14 @@ export default function TelaLogin() {
         secureTextEntry
       />
 
-      <TouchableOpacity style={styles.botao} onPress={handleEntrar}>
+      <TouchableOpacity style={styles.botao} onPress={TelaCadastro}>
         <Text style={styles.textoBotao}>Entrar</Text>
       </TouchableOpacity>
+        
       
-        <Button title="Navegar" onPress={handleEntrar}/>
-      
+       
+        
+  
 
       {/* <TouchableOpacity style={styles.icone} onPress={() => console.log('Ícone Pressionado')}>
         <Image source={require('../../../assets/icondois.png')} style={{ width: 32, height: 32 }} />

@@ -4,15 +4,13 @@ import TelaLogin from "././telas/TelaLogin";
 import Carrinho from "././telas/Carrinho";
 import Servicos from "././telas/Servicos";
 import TelaCadastro from "./telas/TelaCadastro";
-
-       
-
-import { cores } from './estilos'
+import { AppNavigation } from "./componentes/Navigation/Navigation";
 
 const Tab = createBottomTabNavigator();
 
 export default function Rotas() {
     return <NavigationContainer>
+        
         <Tab.Navigator
         tabBarOptions={{ 
             activeTintColor: 'white',
@@ -32,15 +30,19 @@ export default function Rotas() {
                 paddingTop: 11,
                 backgroundColor: '#242323'
             },
-            keyboardHidesTabBar: true
+            keyboardHidesTabBar: true //quando clicar nos inputs o teclado vai ficar por cima da TabBar
         }}>
-            <Tab.Screen name="Capitão" component={TelaLogin} options={{ headerShown: false}}/>
+            <Tab.Screen name="Login" component={TelaLogin} options={{ headerShown: false}}/>
             <Tab.Screen name="Cadastro" component={TelaCadastro} options={{ headerShown: false}}/>
-            <Tab.Screen name="Confirmados" component={Carrinho} options={{ headerShown: false }}/>
-            <Tab.Screen name="Data/Hora" component={Servicos} options={{ headerShown: false }}/>
-            {/* <Tab.Screen name="TelaLogin" component={TelaLogin}/>
-            <Tab.Screen name="TelaCadastro" component={TelaCadastro}/> */}
+            <Tab.Screen name="Carrinho" component={Carrinho} options={{ headerShown: false }}/>
+            <Tab.Screen name="Servicos" component={Servicos} options={{ headerShown: false }}/>
+
+            {/* <Tab.Screen name="AppNavigation" component={AppNavigation} options={{ title: 'Navegação'}}/> */}
+            
             
         </Tab.Navigator>
     </NavigationContainer>
+    
+    
 }
+            
