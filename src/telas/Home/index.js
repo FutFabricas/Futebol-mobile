@@ -7,6 +7,7 @@ import {styles }from './estilos';
 
 export default function Home(){
     return <>
+    <StatusBar backgroundColor={'#6FAF46'}/>
         <View style = {styles.home_topo} >
             <TouchableOpacity style = {styles.botao_home_topo} onPress={() => {console.log('Botão Sair Apertado!')}}>
                 <Image source={require('../../../assets/icon_sair.png')}  style={{ width: 36, height: 36 }}/>
