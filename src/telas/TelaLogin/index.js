@@ -17,7 +17,7 @@ function TelaLogin() {
     <View style={styles.container}>
       <Button title="Navegaar" onPress={irParaTelaSecundaria}/>
       <TouchableOpacity style={styles.botaoVoltar} onPress={() => console.log('Botão Voltar Pressionado')}>
-        <Text style={{ color: '#FFF' }}> voltar</Text>
+        <Text style={{ color: '#FFF' }}> voltaaaaar</Text>
       </TouchableOpacity>
 
       <Text style={styles.titulo}>BEM-VINDO, CAPITÃO!</Text>
