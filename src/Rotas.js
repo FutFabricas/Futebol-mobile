@@ -4,11 +4,10 @@ import TelaLogin from "././telas/TelaLogin";
 import Carrinho from "././telas/Carrinho";
 import Servicos from "././telas/Servicos";
 import TelaCadastro from "./telas/TelaCadastro";
-import { AppNavigation } from "./componentes/Navigation/Navigation";
 
 const Tab = createBottomTabNavigator();
 
-export default function Rotas() {
+function Rotas() {
     return <NavigationContainer>
         
         <Tab.Navigator
@@ -37,7 +36,7 @@ export default function Rotas() {
             <Tab.Screen name="Carrinho" component={Carrinho} options={{ headerShown: false }}/>
             <Tab.Screen name="Servicos" component={Servicos} options={{ headerShown: false }}/>
 
-            {/* <Tab.Screen name="AppNavigation" component={AppNavigation} options={{ title: 'Navegação'}}/> */}
+            
             
             
         </Tab.Navigator>
@@ -45,4 +44,4 @@ export default function Rotas() {
     
     
 }
-            
+export default Rotas;

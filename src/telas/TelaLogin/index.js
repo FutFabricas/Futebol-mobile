@@ -2,14 +2,14 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Button} from 'react-native';
 import { styles } from './estilos';
 import { useNavigation } from '@react-navigation/native';
-import TelaCadastro from '../TelaCadastro';
+import TelaCadastro from '../TelaCadastro'
 
 
 export default function TelaLogin() {
   const navigation = useNavigation();
 
   const irParaTelaSecundaria = () => {
-    navigation.navigate(TelaCadastro);
+    navigation.navigate('TelaCadastro');
   };
   
   return (
@@ -37,18 +37,12 @@ export default function TelaLogin() {
         secureTextEntry
       />
 
-      <TouchableOpacity style={styles.botao} onPress={TelaCadastro}>
-        <Text style={styles.textoBotao}>Entrar</Text>
-      </TouchableOpacity>
+    <TouchableOpacity style={styles.botao} onPress={irParaTelaSecundaria}>
+      <Text style={styles.textoBotao}> Asoba </Text>
+    </TouchableOpacity>
+
         
       
-       
-        
-  
-
-      {/* <TouchableOpacity style={styles.icone} onPress={() => console.log('Ícone Pressionado')}>
-        <Image source={require('../../../assets/icondois.png')} style={{ width: 32, height: 32 }} />
-      </TouchableOpacity> */} 
     </View>
   );
 };
