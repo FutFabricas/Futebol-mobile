@@ -5,15 +5,14 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
-function TelaLogin() {
-  const navigation = useNavigation();
+function TelaLogin({ navigation }) {
 
   const irParaTelaSecundaria = () => {
-    navigation.navigate(TelaCadastro);
+    navigation.navigate('TelaCadastro');
   };
   
   return (
-   
+    
     <View style={styles.container}>
       <Button title="Navegaar" onPress={irParaTelaSecundaria}/>
       <TouchableOpacity style={styles.botaoVoltar} onPress={() => console.log('Botão Voltar Pressionado')}>
