@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import TelaCadastro from '../TelaCadastro';
 import Servicos from '../Servicos';
 import Carrinho from '../Carrinho';
+
 const Tab = createBottomTabNavigator();
 
 function Tabs() {

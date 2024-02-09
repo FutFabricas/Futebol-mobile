@@ -35,7 +35,7 @@ function TelaLogin({ navigation }) {
       />
 
     <TouchableOpacity style={styles.botao} onPress={irParaTelaSecundaria}>
-      <Text style={styles.textoBotao}> COMMIT ANTES DA GRANDE MUDANÇA </Text>
+      <Text style={styles.textoBotao}> COMMIT DEPOIS DA GRANDE MUDANÇA </Text>
     </TouchableOpacity>
 
     </View>
