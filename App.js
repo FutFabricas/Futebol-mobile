@@ -17,4 +17,3 @@ export default function App() {
   }
   return <Home/>;
 }
-export default App;
