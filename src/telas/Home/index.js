@@ -6,6 +6,11 @@ import {styles }from './estilos';
 
 
 export default function Home(){
+    const botaoCapitao = () => {
+        alert("OOLOASOD")
+    }
+
+
     return <>
     <StatusBar backgroundColor={'#6FAF46'}/>
         <View style = {styles.home_topo} >
@@ -13,7 +18,7 @@ export default function Home(){
                 <Image source={require('../../../assets/icon_sair.png')}  style={{ width: 36, height: 36 }}/>
             </TouchableOpacity>
 
-            <TouchableOpacity style = {styles.botao_home_topo} onPress={() => {console.log('Botão Capitão Apertado!')}}>
+            <TouchableOpacity style = {styles.botao_home_topo} onPress={() => botaoCapitao()}>
                 <Image source={require('../../../assets/icon_capitaocolorido32.png')}/>
                 <Text style = {styles.texto_botao_home_topo}>CAPITÃO</Text>
             </TouchableOpacity>
