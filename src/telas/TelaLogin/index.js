@@ -1,21 +1,19 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Button} from 'react-native';
 import { styles } from './estilos';
-import { useNavigation } from '@react-navigation/native';
-import TelaCadastro from '../TelaCadastro'
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 
-export default function TelaLogin() {
+function TelaLogin() {
   const navigation = useNavigation();
 
   const irParaTelaSecundaria = () => {
-    navigation.navigate('TelaCadastro');
+    navigation.navigate(TelaCadastro);
   };
   
   return (
-      
-
-    
+   
     <View style={styles.container}>
       <Button title="Navegaar" onPress={irParaTelaSecundaria}/>
       <TouchableOpacity style={styles.botaoVoltar} onPress={() => console.log('Botão Voltar Pressionado')}>
@@ -41,8 +39,7 @@ export default function TelaLogin() {
       <Text style={styles.textoBotao}> Asoba </Text>
     </TouchableOpacity>
 
-        
-      
     </View>
   );
 };
+export default TelaLogin;
