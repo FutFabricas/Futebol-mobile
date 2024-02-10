@@ -14,12 +14,13 @@ export default function Home( { navigation } ) {
         navigation.navigate('Tabs')
     }
     const fecharApp = () => {
-        // Exibe o alerta quando o usuário pressiona o botão para fechar o app
-        Alert.alert('Confirmação', 'Deseja fechar o aplicativo?', [
+        // obg chatgpt
+        Alert.alert('Sair do FutFábricas?', 'Não esqueça o colete!', [
           {
             text: 'Cancelar',
             onPress: () => null,
             style: 'cancel',
+            
           },
           {
             text: 'Sair',
@@ -33,13 +34,15 @@ export default function Home( { navigation } ) {
         <StatusBar backgroundColor={'#6FAF46'} />
         <View style={styles.home_topo} >
             <TouchableOpacity
+
                 style={styles.botao_home_topo}
                 onPress={fecharApp}
             >
+                {/* <Text style={{ color: '#FFF' }}> sair</Text> */}
                 <Image
                     source={
                         require('../../../assets/icon_sair.png')}
-                    style={{ width: 36, height: 36 }}
+                    style={{ width: 29 , height: 29 }}
 
                 />
             </TouchableOpacity>
@@ -49,11 +52,14 @@ export default function Home( { navigation } ) {
                 onPress={() => botaoCapitao()}
             >
                 <Image
+                    
                     source={require('../../../assets/icon_capitaocolorido32.png')}
+                    style={{width: 29, height: 29}}
+                    
                 />
                 <Text
                     style={styles.texto_botao_home_topo}>
-                    CAPITÃO
+                    
 
                 </Text>
             </TouchableOpacity>
@@ -64,7 +70,7 @@ export default function Home( { navigation } ) {
         >
             <Text
                 style={styles.titulo}>
-                BEM-VINDO, JOGADOR!
+                FUT-FÁBRICAS
             </Text>
         </View>
 

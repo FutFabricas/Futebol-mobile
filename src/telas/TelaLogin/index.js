@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Button} from 'react-native';
 import { styles } from './estilos';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+
 
 
 export default function TelaLogin({ navigation }) {
