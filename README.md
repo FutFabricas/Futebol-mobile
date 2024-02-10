@@ -9,6 +9,28 @@
  * Expo Cli / Expo Go
  * Android Studio
 
+
+
+### Rodar Projeto
+
+atualizar dependencias 
+```
+npm i 
+```
+rodar projeto
+
+```
+npm start
+```
+
+#### Adicionar Lib
+
+rodar 
+```
+npm i -S <lib>
+```
+
+
 ### 💾Versão das Ferramentas:
 * Node:  20.11.0
 * EXPO CLI:

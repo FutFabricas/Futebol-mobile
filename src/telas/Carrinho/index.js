@@ -58,7 +58,7 @@ const servicos = [
     
 ];
 
-export default function Carrinho(){ //esse export default só pode ser utilizado uma vez por arquivo
+export default function Carrinho({ navigation }){ //esse export default só pode ser utilizado uma vez por arquivo
     const total = servicos.reduce((soma,{preco, quantidade}) => soma + (preco * quantidade), 0); //aqui eu to percorrendo cada item e retornando sempre a 'soma'(que é o valor anterior) e somando pela multiplicação do 'preço' * 'quantidade' 
 
     return <>
