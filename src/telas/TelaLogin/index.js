@@ -1,22 +1,20 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Button} from 'react-native';
 import { styles } from './estilos';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 
 
-function TelaLogin({ navigation }) {
 
-  const irParaTelaSecundaria = () => {
-    navigation.navigate('TelaCadastro');
-  };
+export default function TelaLogin({ navigation }) {
+  const goToTab = () => {
+    navigation.navigate('Tabs')
+}
+  
   
   return (
     
     <View style={styles.container}>
-      <Button title="Navegaar" onPress={irParaTelaSecundaria}/>
-      <TouchableOpacity style={styles.botaoVoltar} onPress={() => console.log('Botão Voltar Pressionado')}>
-        <Text style={{ color: '#FFF' }}> voltaaaaar</Text>
+      <TouchableOpacity style={styles.botaoVoltar} onPress={() => navigation.goBack()}>
+        <Text style={{ color: '#FFF' }}> voltar</Text>
       </TouchableOpacity>
 
       <Text style={styles.titulo}>BEM-VINDO, CAPITÃO!</Text>
@@ -34,11 +32,10 @@ function TelaLogin({ navigation }) {
         secureTextEntry
       />
 
-    <TouchableOpacity style={styles.botao} onPress={irParaTelaSecundaria}>
-      <Text style={styles.textoBotao}> COMMIT DEPOIS DA GRANDE MUDANÇA </Text>
+    <TouchableOpacity style={styles.botao} onPress={goToTab}>
+      <Text style={styles.textoBotao}> ENTRAR </Text>
     </TouchableOpacity>
 
     </View>
   );
 };
-export default TelaLogin;

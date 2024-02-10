@@ -1,10 +1,8 @@
 import React from "react";
-import { View, Text, Image, SafeAreaView, StatusBar, Button, Touchable, TouchableOpacity } from "react-native";
-import { LinearGradient } from 'expo-linear-gradient';
+import { Alert, View, Text, Image, StatusBar, TouchableOpacity, BackHandler } from "react-native";
 import { styles } from './estilos';
 
-
-export default function Home({ navigation } ) {
+export default function Home( { navigation } ) {
     
     const botaoCapitao = () => {
         navigation.navigate('Login')
@@ -12,22 +10,39 @@ export default function Home({ navigation } ) {
     const goToTab = () => {
         navigation.navigate('Tabs')
     }
+    const fecharApp = () => {
+        
+        Alert.alert('Sair do FutFábricas?', 'Não esqueça de levar o colete!', [
+          {
+          
+            text: 'Cancelar',
+            onPress: () => null,
+            style: 'cancel',
+            
+          },
+          {
+            text: 'Sair',
+            onPress: () => BackHandler.exitApp(),
+          },
+        ]);
+      };
+    
 
     return <>
         <StatusBar backgroundColor={'#6FAF46'} />
         <View style={styles.home_topo} >
             <TouchableOpacity
+
                 style={styles.botao_home_topo}
-                onPress={() => {
-                    console.log('Botão Sair Apertado!')
-                }}
+                onPress={fecharApp}
             >
                 <Image
                     source={
                         require('../../../assets/icon_sair.png')}
-                    style={{ width: 36, height: 36 }}
+                    style={{ width: 29 , height: 29 }}
 
                 />
+                        <Text style={{ color: '#FFF' }}>SAIR</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -35,11 +50,14 @@ export default function Home({ navigation } ) {
                 onPress={() => botaoCapitao()}
             >
                 <Image
+                    
                     source={require('../../../assets/icon_capitaocolorido32.png')}
+                    style={{width: 29, height: 29}}
+                    
                 />
                 <Text
                     style={styles.texto_botao_home_topo}>
-                    CAPITÃO
+                    
 
                 </Text>
             </TouchableOpacity>
@@ -50,13 +68,15 @@ export default function Home({ navigation } ) {
         >
             <Text
                 style={styles.titulo}>
-                BEM-VINDO, JOGADOR!
+                FUT-FÁBRICAS
             </Text>
         </View>
 
-        <View style={styles.container}>
+
+                
+        <View style={styles.container}> 
             <TouchableOpacity style={styles.botao_home} onPress={() => goToTab()}>
-                <Text style={styles.texto_botao}> FUTEBOL MARCADO!</Text>
+                <Text style={styles.texto_botao}>VEM PRO FUT!</Text>
             </TouchableOpacity>
         </View>
     </>
