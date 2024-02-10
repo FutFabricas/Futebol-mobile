@@ -1,12 +1,13 @@
 import React from "react";
-import { View, Text, Image, SafeAreaView, StatusBar, Button, Touchable, TouchableOpacity } from "react-native";
+import { View, Text, Image, SafeAreaView, StatusBar, Button, Touchable, TouchableOpacity, BackHandler } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import { styles } from './estilos';
 
 
-export default function Home({ navigation } ) {
+export default function Home( { navigation } ) {
     
     const botaoCapitao = () => {
+        alert("O CAPITÃO CAGOU NAS CALÇAS")
         navigation.navigate('Login')
     }
     const goToTab = () => {
@@ -18,9 +19,7 @@ export default function Home({ navigation } ) {
         <View style={styles.home_topo} >
             <TouchableOpacity
                 style={styles.botao_home_topo}
-                onPress={() => {
-                    console.log('Botão Sair Apertado!')
-                }}
+                onPress={() => BackHandler.exitApp()}
             >
                 <Image
                     source={
@@ -56,7 +55,7 @@ export default function Home({ navigation } ) {
 
         <View style={styles.container}>
             <TouchableOpacity style={styles.botao_home} onPress={() => goToTab()}>
-                <Text style={styles.texto_botao}> FUTEBOL MARCADO!</Text>
+                <Text style={styles.texto_botao}>VEM PRO FUT!</Text>
             </TouchableOpacity>
         </View>
     </>

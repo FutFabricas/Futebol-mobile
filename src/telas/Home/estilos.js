@@ -58,20 +58,22 @@ export const styles = StyleSheet.create  ({
 
     botao_home: {
         color: '#6FAF46',
-        width: 347,
+        width: 315,
         height: 65,
-        borderRadius: 10,
+        borderRadius: 15,
         backgroundColor: '#6FAF46',
+        background: 'linear-gradient(to right, #92C357, #6FAF46)',
         fontFamily: 'InterRegular',
         fontSize: 30,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: 140
     },
 
     texto_botao: {
         color: '#FFFFFF',
         fontFamily: 'InterTitulos',
-        fontSize: 20,
+        fontSize: 40,
         
 
 
