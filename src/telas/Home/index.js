@@ -1,22 +1,20 @@
-import React, {useEffect} from "react";
-import { Alert, View, Text, Image, SafeAreaView, StatusBar, Button, Touchable, TouchableOpacity, BackHandler } from "react-native";
-import { LinearGradient } from 'expo-linear-gradient';
+import React from "react";
+import { Alert, View, Text, Image, StatusBar, TouchableOpacity, BackHandler } from "react-native";
 import { styles } from './estilos';
-
 
 export default function Home( { navigation } ) {
     
     const botaoCapitao = () => {
-        alert("Digite seu Login e Senha")
         navigation.navigate('Login')
     }
     const goToTab = () => {
         navigation.navigate('Tabs')
     }
     const fecharApp = () => {
-        // obg chatgpt
+        
         Alert.alert('Sair do FutFábricas?', 'Não esqueça de levar o colete!', [
           {
+          
             text: 'Cancelar',
             onPress: () => null,
             style: 'cancel',
@@ -38,13 +36,13 @@ export default function Home( { navigation } ) {
                 style={styles.botao_home_topo}
                 onPress={fecharApp}
             >
-                {/* <Text style={{ color: '#FFF' }}> sair</Text> */}
                 <Image
                     source={
                         require('../../../assets/icon_sair.png')}
                     style={{ width: 29 , height: 29 }}
 
                 />
+                        <Text style={{ color: '#FFF' }}>SAIR</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -74,7 +72,9 @@ export default function Home( { navigation } ) {
             </Text>
         </View>
 
-        <View style={styles.container}>
+
+                
+        <View style={styles.container}> 
             <TouchableOpacity style={styles.botao_home} onPress={() => goToTab()}>
                 <Text style={styles.texto_botao}>VEM PRO FUT!</Text>
             </TouchableOpacity>
