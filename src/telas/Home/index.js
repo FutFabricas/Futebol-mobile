@@ -7,7 +7,7 @@ import { styles } from './estilos';
 export default function Home( { navigation } ) {
     
     const botaoCapitao = () => {
-        alert("O CAPITÃO CAGOU NAS CALÇAS")
+        alert("Digite seu Login e Senha")
         navigation.navigate('Login')
     }
     const goToTab = () => {
@@ -15,7 +15,7 @@ export default function Home( { navigation } ) {
     }
     const fecharApp = () => {
         // obg chatgpt
-        Alert.alert('Sair do FutFábricas?', 'Não esqueça o colete!', [
+        Alert.alert('Sair do FutFábricas?', 'Não esqueça de levar o colete!', [
           {
             text: 'Cancelar',
             onPress: () => null,
