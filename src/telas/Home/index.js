@@ -1,5 +1,5 @@
-import React from "react";
-import { View, Text, Image, SafeAreaView, StatusBar, Button, Touchable, TouchableOpacity, BackHandler } from "react-native";
+import React, {useEffect} from "react";
+import { Alert, View, Text, Image, SafeAreaView, StatusBar, Button, Touchable, TouchableOpacity, BackHandler } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import { styles } from './estilos';
 
@@ -13,13 +13,28 @@ export default function Home( { navigation } ) {
     const goToTab = () => {
         navigation.navigate('Tabs')
     }
+    const fecharApp = () => {
+        // Exibe o alerta quando o usuário pressiona o botão para fechar o app
+        Alert.alert('Confirmação', 'Deseja fechar o aplicativo?', [
+          {
+            text: 'Cancelar',
+            onPress: () => null,
+            style: 'cancel',
+          },
+          {
+            text: 'Sair',
+            onPress: () => BackHandler.exitApp(),
+          },
+        ]);
+      };
+    
 
     return <>
         <StatusBar backgroundColor={'#6FAF46'} />
         <View style={styles.home_topo} >
             <TouchableOpacity
                 style={styles.botao_home_topo}
-                onPress={() => BackHandler.exitApp()}
+                onPress={fecharApp}
             >
                 <Image
                     source={

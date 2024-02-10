@@ -9,7 +9,7 @@ export default function TelaCadastro() {
   const navigation = useNavigation();
 
   const handleAgendarPress = () => {
-    // Ação a ser executada quando o botão "Agendar FUT!" for pressionado
+    alert("FUT MARCADO!!")
     console.log('Botão Agendar FUT! Pressionado');
   };
 
@@ -19,7 +19,7 @@ export default function TelaCadastro() {
         <Text style={{ color: '#FFF' }}> voltar</Text>
       </TouchableOpacity>
 
-      <Text style={estilosCadastro.titulo}>Agende FUT!</Text>
+      <Text style={estilosCadastro.titulo}>Agende o FUT!</Text>
 
       <TextInput
         style={estilosCadastro.input}
