@@ -1,11 +1,10 @@
-//esse tabs vai ser o de quem não é adm, sem acesso ao marcar fut, que deve ser uma função só do CAPITÃOimport React from 'react'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import TelaConfirmados from '../TelaConfirmados';
 import TelaFutMarcado from '../TelaFutMarcado';
 
 const Tab = createBottomTabNavigator();
 
-export default function Tabsdois() {
+export default function Tabsegundo() {
   return (
     <Tab.Navigator
       tabBarOptions={{
@@ -36,4 +35,3 @@ export default function Tabsdois() {
     </Tab.Navigator>
   )
 }
-
