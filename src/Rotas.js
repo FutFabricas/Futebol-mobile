@@ -6,7 +6,7 @@ import Login from "./telas/TelaLogin";
 import Home from "./telas/Home"
 import TelaFutMarcado from "./telas/TelaFutMarcado";
 import TelaConfirmados from "./telas/TelaConfirmados";
-import Tabsdois from "./telas/TabsDois";
+import Tabsegundo from "./telas/Tabsegundo";
 
 const StackNavigation = createNativeStackNavigator();
 
@@ -23,12 +23,7 @@ function Rotas() {
                 component={Tabs}
                 options={{ headerShown: false }} 
                 />
-            <StackNavigation.Screen
-                name="Tabsdois"
-                component={Tabsdois}
-                options={{ headerShown: false }} 
-                />
-          
+        
             <StackNavigation.Screen
                 name="Login"
                 component={Login}
@@ -43,6 +38,12 @@ function Rotas() {
             <StackNavigation.Screen
                 name="TelaConfirmados"
                 component={TelaConfirmados}
+                options={{ headerShown: false,  }} 
+                />
+
+            <StackNavigation.Screen
+                name="Tabsegundo"
+                component={Tabsegundo}
                 options={{ headerShown: false,  }} 
                 />
             

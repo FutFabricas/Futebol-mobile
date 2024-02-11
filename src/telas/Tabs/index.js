@@ -1,8 +1,8 @@
 import React from 'react'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import TelaCadastro from '../TelaCadastro';
-import Servicos from '../Servicos';
-import Carrinho from '../Carrinho';
+// import Servicos from '../Servicos';
+// import Carrinho from '../Carrinho';
 import TelaConfirmados from '../TelaConfirmados';
 import TelaFutMarcado from '../TelaFutMarcado';
 
