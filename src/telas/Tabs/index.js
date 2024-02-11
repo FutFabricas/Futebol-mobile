@@ -32,7 +32,7 @@ function Tabs() {
         keyboardHidesTabBar: true //quando clicar nos inputs o teclado vai ficar por cima da TabBar
       }}>
   
-      <Tab.Screen name="Cadastro" component={TelaCadastro} options={{ headerShown: false }} />
+      <Tab.Screen name="Marcar Fut" component={TelaCadastro} options={{ headerShown: false }} />
       {/* <Tab.Screen name="Carrinho" component={Carrinho} options={{ headerShown: false }} /> */}
       {/* <Tab.Screen name="Servicos" component={Servicos} options={{ headerShown: false }} /> */}
       <Tab.Screen name="Confirmados" component={TelaConfirmados} options={{ headerShown: false}}/>
