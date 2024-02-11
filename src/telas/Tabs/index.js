@@ -4,6 +4,7 @@ import TelaCadastro from '../TelaCadastro';
 import Servicos from '../Servicos';
 import Carrinho from '../Carrinho';
 import TelaConfirmados from '../TelaConfirmados';
+import TelaFutMarcado from '../TelaFutMarcado';
 
 const Tab = createBottomTabNavigator();
 
@@ -35,6 +36,7 @@ function Tabs() {
       <Tab.Screen name="Carrinho" component={Carrinho} options={{ headerShown: false }} />
       <Tab.Screen name="Servicos" component={Servicos} options={{ headerShown: false }} />
       <Tab.Screen name="Confirmados" component={TelaConfirmados} options={{ headerShown: false}}/>
+      <Tab.Screen name ="Fut Marcado" component={TelaFutMarcado} options={{ headerShown: false}}/>
 
     </Tab.Navigator>
   )

@@ -4,6 +4,7 @@ import { createNativeStackNavigator, ce } from '@react-navigation/native-stack';
 import Tabs from "././telas/Tabs";
 import Login from "./telas/TelaLogin";
 import Home from "./telas/Home"
+import TelaFutMarcado from "./telas/TelaFutMarcado";
 
 const StackNavigation = createNativeStackNavigator();
 
@@ -25,6 +26,13 @@ function Rotas() {
                 component={Login}
                 options={{ headerShown: false,  }} 
                 />
+            
+            <StackNavigation.Screen
+                name="TelaFutMarcado"
+                component={TelaFutMarcado}
+                options={{ headerShown: false,  }} 
+                />
+            
         </StackNavigation.Navigator>
     </NavigationContainer>
 
