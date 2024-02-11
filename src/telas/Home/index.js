@@ -7,8 +7,8 @@ export default function Home( { navigation } ) {
     const botaoCapitao = () => {
         navigation.navigate('Login')
     }
-    const goToTab = () => {
-        navigation.navigate('Tabs')
+    const goToFut = () => {
+        navigation.navigate('TelaFutMarcado')
     }
     const fecharApp = () => {
         
@@ -75,7 +75,7 @@ export default function Home( { navigation } ) {
 
                 
         <View style={styles.container}> 
-            <TouchableOpacity style={styles.botao_home} onPress={() => goToTab()}>
+            <TouchableOpacity style={styles.botao_home} onPress={() => goToFut()}>
                 <Text style={styles.texto_botao}>VEM PRO FUT!</Text>
             </TouchableOpacity>
         </View>
