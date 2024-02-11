@@ -1,9 +1,9 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import TelaCadastro from '../TelaCadastro';
 import Servicos from '../Servicos';
 import Carrinho from '../Carrinho';
+import TelaConfirmados from '../TelaConfirmados';
 
 const Tab = createBottomTabNavigator();
 
@@ -34,6 +34,7 @@ function Tabs() {
       <Tab.Screen name="Cadastro" component={TelaCadastro} options={{ headerShown: false }} />
       <Tab.Screen name="Carrinho" component={Carrinho} options={{ headerShown: false }} />
       <Tab.Screen name="Servicos" component={Servicos} options={{ headerShown: false }} />
+      <Tab.Screen name="Confirmados" component={TelaConfirmados} options={{ headerShown: false}}/>
 
     </Tab.Navigator>
   )
