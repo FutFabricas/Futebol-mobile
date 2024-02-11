@@ -1,14 +1,25 @@
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, Button} from 'react-native';
+import React, {useState} from 'react';
+import { View, Text, TextInput, TouchableOpacity, Alert} from 'react-native';
 import { styles } from './estilos';
 
 
 
 export default function TelaLogin({ navigation }) {
-  const goToTab = () => {
-    navigation.navigate('Tabs')
-}
-  
+      
+      const [username, setUsername] = useState('');
+      const [password, setPassword] = useState('');
+
+      const botaoEntrar = () => {
+       
+        if (username === 'Adm' && password === '123') {
+         
+          Alert.alert('Vamos marcar esse fut, insira os dados e avise a galera!');
+          navigation.navigate('Tabs');
+        } else {
+          
+          Alert.alert('Senha incorreta');
+        }
+      };
   
   return (
     
@@ -23,6 +34,7 @@ export default function TelaLogin({ navigation }) {
         style={styles.input}
         placeholder="Login"
         placeholderTextColor="#888"
+        onChangeText={(text) => setUsername(text)}
       />
 
       <TextInput           
@@ -30,12 +42,16 @@ export default function TelaLogin({ navigation }) {
         placeholder="Senha"
         placeholderTextColor="#888"
         secureTextEntry
+        onChangeText={(text) => setPassword(text)}
       />
 
-    <TouchableOpacity style={styles.botao} onPress={goToTab}>
+    <TouchableOpacity style={styles.botao} onPress={botaoEntrar}>
       <Text style={styles.textoBotao}> ENTRAR </Text>
     </TouchableOpacity>
 
     </View>
+
+
+
   );
 };
