@@ -8,7 +8,7 @@ export default function Home( { navigation } ) {
         navigation.navigate('Login')
     }
     const goToFut = () => {
-        navigation.navigate('Tabs')
+        navigation.navigate('Tabsdois')
     }
     const fecharApp = () => {
         
