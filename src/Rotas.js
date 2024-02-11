@@ -18,11 +18,13 @@ function Rotas() {
             <StackNavigation.Screen
                 name="Tabs"
                 component={Tabs}
-                options={{ headerShown: false }} />
+                options={{ headerShown: false }} 
+                />
             <StackNavigation.Screen
                 name="Login"
                 component={Login}
-                options={{ headerShown: false,  }} />
+                options={{ headerShown: false,  }} 
+                />
         </StackNavigation.Navigator>
     </NavigationContainer>
 
