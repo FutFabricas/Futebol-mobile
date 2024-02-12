@@ -1,56 +1,71 @@
-import React, { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { View, Text, TouchableOpacity, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { estilosConfirmados } from './estilos';
+import Modaldoidao from '../../componentes/Modal';
+import List from '../../componentes/List';
+import { getJogadores } from '../../service/jogadores';
 
 
 export default function TelaConfirmados() {
+  const [data, setData] = useState([]);
+  const [carregando, setCarregando] = useState(true);
+  const [size, setSize] = useState(0);
 
-   const navigation = useNavigation();
+  const delJogador = (id) => {
+    newData = data.filter((item) => item.id !== id);
+    setData(newData);
+  };
 
-   const botaoAdicionarNome = () => {
-    window.alert("oi")
-   }
+  const get = useCallback(async () => {
+    try {
+      const response = await getJogadores();
 
-   //seção do banco de dados
-   const [user,setJogador]=useState(null);
+      setData(response);
 
-  //enviar os dados do formulário para o back
-  async function registerJogador()
-  {
-   console.log("essa função foi acionada eu quero me matar")
+      setSize(response.length);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setCarregando(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    get();
+  }, [get]);
+
+  const registerJogador = (jogador) => {
+    setData((ant)=>[...ant,jogador]); //o set data pega oq ele tem dentro e adiciona o jogador, garantindo o dado dentro do data
+    setModal(true);
   }
-
-
-
+  
+  const [modal,setModal]=useState(false);
 
 
   return (
     <View style={estilosConfirmados.container}>
 
       <Text style={estilosConfirmados.titulo}>Lista de Confirmados:</Text>
-
       
-      <Text style={estilosConfirmados.textoConfirmados}>Neymar Jr.</Text>
-      <Text style={estilosConfirmados.textoConfirmados}>Lionel Messi</Text>
-      <Text style={estilosConfirmados.textoConfirmados}>Cristiano Ronaldo</Text>
-     
-        
-        
-        
-        
-        
+      <List data={data} delItem={delJogador}/>
+      
+
+
+
         
       <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={registerJogador}>
         <Text style={estilosConfirmados.textoBotaoAdicionar}>+</Text>
       </TouchableOpacity>
-      <TextInput
-        style={estilosConfirmados.input}
-        placeholder="QUERO JOGAR!"
-        placeholderTextColor="#888"
-        onChangeText={(text)=>setJogador(text)}
-      />
-     
+      <Text style={estilosConfirmados.titulo}>QUERO JOGAR</Text>
+
+
+     <Modaldoidao
+      modalVisible={modal}
+      onPress={()=>setModal(!modal)}
+       />
+
+    
       
     </View>
   );
