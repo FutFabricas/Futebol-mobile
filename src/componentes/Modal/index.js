@@ -9,8 +9,9 @@ const Modaldoidao = ({ modalVisible, onPress }) => {
 
   const salvarNaLista = async () => {
     try{
-      await createJogador({name: jogador})
-      onPress()
+      const newJogador = await createJogador({name: jogador})
+      
+      onPress(newJogador)
     }
      catch(error){
       console.log(error)
@@ -33,7 +34,7 @@ const Modaldoidao = ({ modalVisible, onPress }) => {
           />
           <Pressable
             style={[styles.button, styles.buttonClose]}
-            onPress={() => salvarNaLista()}>
+            onPress={(jogador) => salvarNaLista(jogador)}>
             <Text style={styles.textStyle}>Confirmar</Text>
           </Pressable>
         </View>
