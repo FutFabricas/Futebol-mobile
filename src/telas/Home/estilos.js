@@ -21,29 +21,27 @@ export const styles = StyleSheet.create  ({
     botao_home_topo:{
         justifyContent: 'center',
         alignItems: 'center',
-        paddingVertical: 8,
-        paddingHorizontal: 28,
+        paddingVertical: 20,
+        paddingHorizontal: 25,
         
         
     },
 
     texto_botao_home_topo:{
         color: '#FFFFFF',
-        fontFamily: 'InterTitulos',
+        fontFamily: 'InterTitulos'
     },
 
     home_topo:{
         flexDirection: 'row',
         justifyContent: 'space-between',
-        backgroundColor: '#242323',
-        
+        backgroundColor: '#242323'
     },  
 
     home_topo_titulo: {
         backgroundColor: '#242323',
         textAlign: 'center',
-        fontFamily: 'InterTitulos',
-        
+        fontFamily: 'InterTitulos'
        
     },
 
@@ -58,22 +56,23 @@ export const styles = StyleSheet.create  ({
 
     botao_home: {
         color: '#6FAF46',
-        width: 347,
+        width: 315,
         height: 65,
-        borderRadius: 10,
+        borderRadius: 15,
         backgroundColor: '#6FAF46',
+        background: 'linear-gradient(to right, #92C357, #6FAF46)',
         fontFamily: 'InterRegular',
         fontSize: 30,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: 150
     },
 
     texto_botao: {
         color: '#FFFFFF',
         fontFamily: 'InterTitulos',
-        fontSize: 20,
-        
-
-
-    }
+        fontSize: 40,
+    },
+    
+    
 });

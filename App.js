@@ -16,5 +16,5 @@ export default function App() {
   if (!fontesProjeto) {
     return <View/>
   }
-  return <Home/>;
+  return <Rotas/>;
 }

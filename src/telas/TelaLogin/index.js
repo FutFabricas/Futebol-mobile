@@ -1,23 +1,31 @@
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, Button} from 'react-native';
+import React, {useState} from 'react';
+import { View, Text, TextInput, TouchableOpacity, Alert} from 'react-native';
 import { styles } from './estilos';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 
 
-function TelaLogin() {
-  const navigation = useNavigation();
 
-  const irParaTelaSecundaria = () => {
-    navigation.navigate(TelaCadastro);
-  };
+export default function TelaLogin({ navigation }) {
+      
+      const [username, setUsername] = useState('');
+      const [password, setPassword] = useState('');
+
+      const botaoEntrar = () => {
+       
+        if (username === 'Adm' && password === '123') {
+         
+          Alert.alert('Vamos marcar esse fut, insira os dados e avise a galera!');
+          navigation.navigate('Tabs');
+        } else {
+          
+          Alert.alert('Senha incorreta');
+        }
+      };
   
   return (
-   
+    
     <View style={styles.container}>
-      <Button title="Navegaar" onPress={irParaTelaSecundaria}/>
-      <TouchableOpacity style={styles.botaoVoltar} onPress={() => console.log('Botão Voltar Pressionado')}>
-        <Text style={{ color: '#FFF' }}> voltaaaaar</Text>
+      <TouchableOpacity style={styles.botaoVoltar} onPress={() => navigation.goBack()}>
+        <Text style={{ color: '#FFF' }}> voltar</Text>
       </TouchableOpacity>
 
       <Text style={styles.titulo}>BEM-VINDO, CAPITÃO!</Text>
@@ -26,6 +34,7 @@ function TelaLogin() {
         style={styles.input}
         placeholder="Login"
         placeholderTextColor="#888"
+        onChangeText={(text) => setUsername(text)}
       />
 
       <TextInput           
@@ -33,13 +42,16 @@ function TelaLogin() {
         placeholder="Senha"
         placeholderTextColor="#888"
         secureTextEntry
+        onChangeText={(text) => setPassword(text)}
       />
 
-    <TouchableOpacity style={styles.botao} onPress={irParaTelaSecundaria}>
-      <Text style={styles.textoBotao}> COMMIT ANTES DA GRANDE MUDANÇA </Text>
+    <TouchableOpacity style={styles.botao} onPress={botaoEntrar}>
+      <Text style={styles.textoBotao}> ENTRAR </Text>
     </TouchableOpacity>
 
     </View>
+
+
+
   );
 };
-export default TelaLogin;
