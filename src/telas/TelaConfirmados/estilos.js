@@ -35,5 +35,19 @@ export const estilosConfirmados = StyleSheet.create({
     color: '#FFF',
     marginBottom: 15,
     bottom: 100
+  },
+  botao: {
+    height: 40,
+    borderRadius: 3,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#92C357',
+    background: 'linear-gradient(to right, #92C357, #6FAF46)',
+    marginTop: 20,
+    borderRadius: 20
+  },
+  textoBotao: {
+    color: '#FFF',
+    fontFamily: 'Roboto',
   }
 });
