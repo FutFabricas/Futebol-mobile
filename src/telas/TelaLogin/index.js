@@ -11,7 +11,7 @@ export default function TelaLogin({ navigation }) {
 
       const botaoEntrar = () => {
        
-        if (username === 'Adm' && password === '123') {
+        if (username === 'A' && password === 'A') {
          
           Alert.alert('Vamos marcar esse fut, insira os dados e avise a galera!');
           navigation.navigate('Tabs');

@@ -1,19 +1,19 @@
-// TelaCadastro.js
-
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { estilosCadastro } from './estilos';
+
+
 
 export default function TelaCadastro() {
   const navigation = useNavigation();
 
   const handleAgendarPress = () => {
-    alert("FUT MARCADO!!")
-    console.log('Botão Agendar FUT! Pressionado');
+    alert("FUT MARCADO!!");
   };
 
   return (
+    
     <View style={estilosCadastro.container}>
       <TouchableOpacity style={estilosCadastro.botaoVoltar} onPress={() => navigation.goBack()}>
         <Text style={{ color: '#FFF' }}> voltar</Text>
@@ -48,6 +48,8 @@ export default function TelaCadastro() {
       <TouchableOpacity style={estilosCadastro.botao} onPress={handleAgendarPress}>
         <Text style={estilosCadastro.textoBotao}>Agendar FUT!</Text>
       </TouchableOpacity>
+      
     </View>
+    
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { estilosConfirmados } from './estilos';
 
@@ -9,7 +9,7 @@ export default function TelaConfirmados() {
    const navigation = useNavigation();
 
    const botaoAdicionarNome = () => {
-    alert("NOME ADICIONADO")
+    window.alert("oi")
    }
 
   return (
