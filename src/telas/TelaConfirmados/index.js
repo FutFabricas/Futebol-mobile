@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, TouchableWithoutFeedback } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { estilosConfirmados } from './estilos';
 import Modaldoidao from '../../componentes/Modal';
@@ -43,6 +43,7 @@ export default function TelaConfirmados() {
   const [modal,setModal]=useState(false);
 
   return (
+    
     <View style={estilosConfirmados.container}>
       <Text style={estilosConfirmados.titulo}>Lista de Confirmados:</Text>
       <List data={data} delItem={delJogador}/>
@@ -55,6 +56,7 @@ export default function TelaConfirmados() {
            <Modaldoidao
             modalVisible={modal}
             onPress={()=>setModal(!modal)}
+            transparent={true}
              />
     </View>
   );
