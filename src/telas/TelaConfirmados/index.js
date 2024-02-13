@@ -35,9 +35,9 @@ export default function TelaConfirmados() {
   }, [get]);
 
   const registerJogador = (jogador) => {
-    console.log("==========",jogador.target.value)
+    console.log("==========",jogador);
     setData((ant)=>[...ant,jogador]); //o set data pega oq ele tem dentro e adiciona o jogador, garantindo o dado dentro do data
-    setModal(true);
+    setModal(!modal);
   }
   
   const [modal,setModal]=useState(false);
@@ -46,14 +46,16 @@ export default function TelaConfirmados() {
     <View style={estilosConfirmados.container}>
       <Text style={estilosConfirmados.titulo}>Lista de Confirmados:</Text>
       <List data={data} delItem={delJogador}/>
-     <Modaldoidao
-      modalVisible={modal}
-      onPress={()=>setModal(!modal)}
-       /> 
+        
       <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={(jogador)=>registerJogador(jogador)}>
         <Text style={estilosConfirmados.textoBotaoAdicionar}>+</Text>
       </TouchableOpacity>
       <Text style={estilosConfirmados.titulo}>QUERO JOGAR</Text>
+      
+           <Modaldoidao
+            modalVisible={modal}
+            onPress={()=>setModal(!modal)}
+             />
     </View>
   );
 }
