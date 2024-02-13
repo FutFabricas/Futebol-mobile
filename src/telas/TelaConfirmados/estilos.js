@@ -11,7 +11,8 @@ export const estilosConfirmados = StyleSheet.create({
     fontFamily: 'Roboto',
     fontSize: 35,
     color: '#FFF',
-    height: 150
+    height: 150,
+    top: 50
 },
   botaoAdicionar: {
     width: 35,
@@ -56,5 +57,11 @@ export const estilosConfirmados = StyleSheet.create({
     color: '#FFF',
     marginBottom: 15,
     bottom: 1
+  },
+  botaoVoltar: {
+    position: 'absolute',
+    top: 10,
+    left: 20,
+    padding: 10,
   }
 });
