@@ -6,7 +6,6 @@ import Modaldoidao from '../../componentes/Modal';
 import List from '../../componentes/List';
 import { getJogadores } from '../../service/jogadores';
 
-
 export default function TelaConfirmados() {
   const [data, setData] = useState([]);
   const [carregando, setCarregando] = useState(true);
@@ -43,31 +42,18 @@ export default function TelaConfirmados() {
   
   const [modal,setModal]=useState(false);
 
-
   return (
     <View style={estilosConfirmados.container}>
-
       <Text style={estilosConfirmados.titulo}>Lista de Confirmados:</Text>
-      
       <List data={data} delItem={delJogador}/>
-      
-
-
-
-        
       <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={(jogador)=>registerJogador(jogador)}>
         <Text style={estilosConfirmados.textoBotaoAdicionar}>+</Text>
       </TouchableOpacity>
       <Text style={estilosConfirmados.titulo}>QUERO JOGAR</Text>
-
-
      <Modaldoidao
       modalVisible={modal}
       onPress={()=>setModal(!modal)}
-       />
-
-    
-      
+       /> 
     </View>
   );
 }
