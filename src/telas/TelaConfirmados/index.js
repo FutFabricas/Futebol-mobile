@@ -51,7 +51,7 @@ export default function TelaConfirmados() {
       <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={(jogador)=>registerJogador(jogador)}>
         <Text style={estilosConfirmados.textoBotaoAdicionar}>+</Text>
       </TouchableOpacity>
-      <Text style={estilosConfirmados.titulo}>QUERO JOGAR</Text>
+      <Text style={estilosConfirmados.querojogar}>Adicionar Jogador</Text>
       
            <Modaldoidao
             modalVisible={modal}
