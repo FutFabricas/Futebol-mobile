@@ -46,14 +46,14 @@ export default function TelaConfirmados() {
     <View style={estilosConfirmados.container}>
       <Text style={estilosConfirmados.titulo}>Lista de Confirmados:</Text>
       <List data={data} delItem={delJogador}/>
-      <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={(jogador)=>registerJogador(jogador)}>
-        <Text style={estilosConfirmados.textoBotaoAdicionar}>+</Text>
-      </TouchableOpacity>
-      <Text style={estilosConfirmados.titulo}>QUERO JOGAR</Text>
      <Modaldoidao
       modalVisible={modal}
       onPress={()=>setModal(!modal)}
        /> 
+      <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={(jogador)=>registerJogador(jogador)}>
+        <Text style={estilosConfirmados.textoBotaoAdicionar}>+</Text>
+      </TouchableOpacity>
+      <Text style={estilosConfirmados.titulo}>QUERO JOGAR</Text>
     </View>
   );
 }
