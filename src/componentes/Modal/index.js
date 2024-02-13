@@ -34,14 +34,14 @@ const Modaldoidao = ({ modalVisible, onPress }) => {
         <View style={styles.modalView}>
           <TextInput
             style={styles.input}
-            placeholder="Participar"
-            placeholderTextColor="#888"
+            placeholder="Digite seu nome ..."
+            placeholderTextColor="black"
             onChangeText={(text) => setJogador(text)}
           />
           <Pressable
             style={[styles.button, styles.buttonClose]}
             onPress={(jogador) => salvarNaLista(jogador)}>
-            <Text style={styles.textStyle}>Confirmar</Text>
+            <Text style={styles.textStyle}>Confirmar Presença!</Text>
           </Pressable>
 
           <Pressable
