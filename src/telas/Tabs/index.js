@@ -35,8 +35,8 @@ function Tabs() {
       <Tab.Screen name="Marcar Fut" component={TelaCadastro} options={{ headerShown: false }} />
       {/* <Tab.Screen name="Carrinho" component={Carrinho} options={{ headerShown: false }} /> */}
       {/* <Tab.Screen name="Servicos" component={Servicos} options={{ headerShown: false }} /> */}
-      <Tab.Screen name="Confirmados" component={TelaConfirmados} options={{ headerShown: false}}/>
       <Tab.Screen name ="Fut Marcado" component={TelaFutMarcado} options={{ headerShown: false}}/>
+      <Tab.Screen name="Confirmados" component={TelaConfirmados} options={{ headerShown: false}}/>
 
     </Tab.Navigator>
   )
