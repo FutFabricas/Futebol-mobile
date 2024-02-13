@@ -29,8 +29,8 @@ export default function Tabsegundo() {
       }}>
   
 
-      <Tab.Screen name="Confirmados" component={TelaConfirmados} options={{ headerShown: false}}/>
       <Tab.Screen name ="Fut Marcado" component={TelaFutMarcado} options={{ headerShown: false}}/>
+      <Tab.Screen name="Confirmados" component={TelaConfirmados} options={{ headerShown: false}}/>
 
     </Tab.Navigator>
   )
