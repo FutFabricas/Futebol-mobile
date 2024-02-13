@@ -22,7 +22,7 @@ export const styles = StyleSheet.create({
         height: 2,
       },
       shadowOpacity: 0.25,
-      shadowRadius: 4,
+      shadowRadius: 10,
       elevation: 5,
     },
     button: {
@@ -45,5 +45,8 @@ export const styles = StyleSheet.create({
       marginBottom: 15,
       textAlign: 'center',
     },
+    input: {
+      color: 'black'
+    }
   });
 

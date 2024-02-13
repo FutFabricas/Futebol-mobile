@@ -4,11 +4,13 @@ import {
 
 export const styles = StyleSheet.create({
   item: {
-    padding: 20,
-    marginVertical: 8,
+    padding: 1,
+    marginVertical: 1,
     marginHorizontal: 16,
   },
   title: {
-    fontSize: 32,
-  },
+    fontSize: 15,
+    color: 'white',
+    
+  }
 });
