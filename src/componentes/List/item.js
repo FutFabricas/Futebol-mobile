@@ -17,7 +17,7 @@ function Item({ data, delItem }) {
   return (
     <View style={styles.item}>
       <Text style={styles.title}>{data?.name}</Text>
-      <Button onPress={delJogador} title="Del" color="#841584" />
+      <Button onPress={delJogador} title="Del" color="green" />
     </View>
   );
 }

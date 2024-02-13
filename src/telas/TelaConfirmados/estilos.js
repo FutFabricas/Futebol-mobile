@@ -11,7 +11,8 @@ export const estilosConfirmados = StyleSheet.create({
     fontFamily: 'Roboto',
     fontSize: 35,
     color: '#FFF',
-    height: 300
+    height: 150,
+    top: 50
 },
   botaoAdicionar: {
     width: 35,
@@ -43,11 +44,24 @@ export const estilosConfirmados = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#92C357',
     background: 'linear-gradient(to right, #92C357, #6FAF46)',
-    marginTop: 20,
+    marginTop: 50,
     borderRadius: 20
   },
   textoBotao: {
     color: '#FFF',
     fontFamily: 'Roboto',
+  },
+  querojogar: {
+    fontFamily: 'Roboto',
+    fontSize: 16,
+    color: '#FFF',
+    marginBottom: 15,
+    bottom: 1
+  },
+  botaoVoltar: {
+    position: 'absolute',
+    top: 10,
+    left: 20,
+    padding: 10,
   }
 });

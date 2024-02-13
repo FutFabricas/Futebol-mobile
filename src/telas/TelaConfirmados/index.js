@@ -10,6 +10,7 @@ export default function TelaConfirmados() {
   const [data, setData] = useState([]);
   const [carregando, setCarregando] = useState(true);
   const [size, setSize] = useState(0);
+  const navigation = useNavigation();
 
   const delJogador = (id) => {
     newData = data.filter((item) => item.id !== id);
@@ -45,13 +46,18 @@ export default function TelaConfirmados() {
   return (
     
     <View style={estilosConfirmados.container}>
+
+
       <Text style={estilosConfirmados.titulo}>Lista de Confirmados:</Text>
       <List data={data} delItem={delJogador}/>
+      <TouchableOpacity style={estilosConfirmados.botaoVoltar} onPress={() => navigation.goBack()}>
+        <Text style={{ color: '#FFF' }}> voltar</Text>
+      </TouchableOpacity>
         
       <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={(jogador)=>registerJogador(jogador)}>
         <Text style={estilosConfirmados.textoBotaoAdicionar}>+</Text>
       </TouchableOpacity>
-      <Text style={estilosConfirmados.titulo}>QUERO JOGAR</Text>
+      <Text style={estilosConfirmados.querojogar}>Adicionar Jogador</Text>
       
            <Modaldoidao
             modalVisible={modal}
