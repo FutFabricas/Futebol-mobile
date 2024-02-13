@@ -9,7 +9,7 @@ const Modaldoidao = ({ modalVisible, onPress }) => {
   const [jogador, setJogador] = useState('');
 
   const fecharModal = () => {
-    console.log("Fechar modal");
+    console.log("===========Fechar modal");
     onPress(null); // Passa null para indicar que o modal está sendo fechado sem adicionar um novo jogador
   };
 
