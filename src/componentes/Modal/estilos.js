@@ -8,13 +8,15 @@ export const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 22,
+      marginTop: 1,
     },
     modalView: {
       margin: 20,
       backgroundColor: 'white',
-      borderRadius: 20,
-      padding: 35,
+      borderRadius: 10,
+      height: 380,
+      width: 300,
+      padding: 100,
       alignItems: 'center',
       shadowColor: '#000',
       shadowOffset: {
@@ -26,9 +28,10 @@ export const styles = StyleSheet.create({
       elevation: 5,
     },
     button: {
-      borderRadius: 20,
-      padding: 10,
-      elevation: 2,
+      borderRadius: 15,
+      padding: 15,
+      elevation: 10,
+      marginBottom: 20
     },
     buttonOpen: {
       backgroundColor: 'green',
