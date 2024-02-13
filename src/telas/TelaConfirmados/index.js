@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, TouchableWithoutFeedback } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { estilosConfirmados } from './estilos';
 import Modaldoidao from '../../componentes/Modal';
@@ -35,25 +35,29 @@ export default function TelaConfirmados() {
   }, [get]);
 
   const registerJogador = (jogador) => {
-    console.log("==========",jogador.target.value)
+    console.log("==========",jogador);
     setData((ant)=>[...ant,jogador]); //o set data pega oq ele tem dentro e adiciona o jogador, garantindo o dado dentro do data
-    setModal(true);
+    setModal(!modal);
   }
   
   const [modal,setModal]=useState(false);
 
   return (
+    
     <View style={estilosConfirmados.container}>
       <Text style={estilosConfirmados.titulo}>Lista de Confirmados:</Text>
       <List data={data} delItem={delJogador}/>
-     <Modaldoidao
-      modalVisible={modal}
-      onPress={()=>setModal(!modal)}
-       /> 
+        
       <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={(jogador)=>registerJogador(jogador)}>
         <Text style={estilosConfirmados.textoBotaoAdicionar}>+</Text>
       </TouchableOpacity>
       <Text style={estilosConfirmados.titulo}>QUERO JOGAR</Text>
+      
+           <Modaldoidao
+            modalVisible={modal}
+            onPress={()=>setModal(!modal)}
+            transparent={true}
+             />
     </View>
   );
 }
