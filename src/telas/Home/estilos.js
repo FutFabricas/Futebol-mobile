@@ -46,18 +46,27 @@ export const styles = StyleSheet.create  ({
     },
 
     titulo: {
-        color: '#FFFFFF',
-        fontSize: 20,
+        color: '#6FAF46',
         fontFamily: 'InterTitulos',
+        fontSize: 32,
+        height:80,
         textAlign: 'center',
         marginVertical: 40
 
     }, 
 
+    tituloApp: {
+        
+        color: '#FFFFFF',
+        fontSize: 32,
+        fontFamily: 'InterTitulos',
+    },
+
+
     botao_home: {
         color: '#6FAF46',
-        width: 315,
-        height: 65,
+        width: 355,
+        height: 70,
         borderRadius: 15,
         backgroundColor: '#6FAF46',
         background: 'linear-gradient(to right, #92C357, #6FAF46)',
@@ -71,7 +80,7 @@ export const styles = StyleSheet.create  ({
     texto_botao: {
         color: '#FFFFFF',
         fontFamily: 'InterTitulos',
-        fontSize: 40,
+        fontSize: 32,
     },
     
     

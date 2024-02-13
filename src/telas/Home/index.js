@@ -1,4 +1,5 @@
 import React from "react";
+            
 import { Alert, View, Text, Image, StatusBar, TouchableOpacity, BackHandler } from "react-native";
 import { styles } from './estilos';
 
@@ -66,13 +67,14 @@ export default function Home( { navigation } ) {
         <View
             style={styles.home_topo_titulo}
         >
+            
             <Text
                 style={styles.titulo}>
-                FUT-FÁBRICAS
+                <Image source={require('../../../assets/bola-1.png')}/>
+                FUTIBA<Text style={styles.tituloApp}>App</Text>
             </Text>
         </View>
-
-
+                    
                 
         <View style={styles.container}> 
             <TouchableOpacity style={styles.botao_home} onPress={() => goToFut()}>
@@ -80,6 +82,5 @@ export default function Home( { navigation } ) {
             </TouchableOpacity>
         </View>
     </>
-
 
 }
