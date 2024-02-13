@@ -1,42 +1,73 @@
-import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { useCallback, useEffect, useState } from 'react';
+import { View, Text, TouchableOpacity, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { estilosConfirmados } from './estilos';
+import Modaldoidao from '../../componentes/Modal';
+import List from '../../componentes/List';
+import { getJogadores } from '../../service/jogadores';
 
 
 export default function TelaConfirmados() {
+  const [data, setData] = useState([]);
+  const [carregando, setCarregando] = useState(true);
+  const [size, setSize] = useState(0);
 
-   const navigation = useNavigation();
+  const delJogador = (id) => {
+    newData = data.filter((item) => item.id !== id);
+    setData(newData);
+  };
 
-   const botaoAdicionarNome = () => {
-    alert("NOME ADICIONADO")
-   }
+  const get = useCallback(async () => {
+    try {
+      const response = await getJogadores();
+
+      setData(response);
+
+      setSize(response.length);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setCarregando(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    get();
+  }, [get]);
+
+  const registerJogador = (jogador) => {
+    console.log("==========",jogador.target.value)
+    setData((ant)=>[...ant,jogador]); //o set data pega oq ele tem dentro e adiciona o jogador, garantindo o dado dentro do data
+    setModal(true);
+  }
+  
+  const [modal,setModal]=useState(false);
+
 
   return (
     <View style={estilosConfirmados.container}>
 
       <Text style={estilosConfirmados.titulo}>Lista de Confirmados:</Text>
-
       
-      <Text style={estilosConfirmados.textoConfirmados}>Neymar Jr.</Text>
-      <Text style={estilosConfirmados.textoConfirmados}>Lionel Messi</Text>
-      <Text style={estilosConfirmados.textoConfirmados}>Cristiano Ronaldo</Text>
-      <Text style={estilosConfirmados.textoConfirmados}>Kylian Mbappé</Text>
-      <Text style={estilosConfirmados.textoConfirmados}>Robert Lewandowski</Text>
-      <Text style={estilosConfirmados.textoConfirmados}>Kevin De Bruyne</Text>
-      <Text style={estilosConfirmados.textoConfirmados}>Virgil van Dijk</Text>
-      <Text style={estilosConfirmados.textoConfirmados}>Sergio Ramos</Text>
-      <Text style={estilosConfirmados.textoConfirmados}>Luka Modrić</Text>
+      <List data={data} delItem={delJogador}/>
+      
+
+
+
         
-        
-        
-        
-        
-        
-      <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={botaoAdicionarNome}>
+      <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={(jogador)=>registerJogador(jogador)}>
         <Text style={estilosConfirmados.textoBotaoAdicionar}>+</Text>
-        {/* <Text style={estilos.} >Eu vou!</Text> */}
       </TouchableOpacity>
+      <Text style={estilosConfirmados.titulo}>QUERO JOGAR</Text>
+
+
+     <Modaldoidao
+      modalVisible={modal}
+      onPress={()=>setModal(!modal)}
+       />
+
+    
+      
     </View>
   );
 }
