@@ -30,7 +30,7 @@ export default function TelaCadastro() {
                 const salvarLocaleHorario = () => {
                   try {
                     console.log("Adicionando local e horário");
-                    navigation.navigate('TelaFutMarcado', { local, horario })
+                    navigation.navigate('Tabsegundo')
                     
                     // Chama a função para criar horário
                     const newHorario = createHorario({ horario: horario });

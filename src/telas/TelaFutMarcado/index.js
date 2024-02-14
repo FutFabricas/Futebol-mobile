@@ -13,7 +13,7 @@ export default function TelaFutMarcado() {
    const navigation = useNavigation();
 
    const botaoAdicionarNome = () => {
-    alert("Você vai pra tela de adicionar seu nome")
+    navigation.navigate('Confirmados')
    }
 
   return (
@@ -64,7 +64,7 @@ export default function TelaFutMarcado() {
           </View>
 
           <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={botaoAdicionarNome}>
-            <Text style={estilosConfirmados.textoBotaoAdicionar}>Participar</Text>
+            <Text style={estilosConfirmados.textoBotaoAdicionar}>Me coloque na lista!</Text>
 
           </TouchableOpacity>
 
