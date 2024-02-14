@@ -5,9 +5,9 @@ import { estilosCadastro } from './estilos';
 import { createHorario } from '../../service/horario';
 
 
-export default function TelaCadastro({navigation}) {
+export default function TelaCadastro() {
 
-  
+  const navigation = useNavigation();
   const [local, setLocal] = useState('');
   const [horario, setHorario] = useState('');
 
@@ -15,10 +15,11 @@ export default function TelaCadastro({navigation}) {
   const salvarLocaleHorario = async () => {
     try {
       console.log("===================Adicionando local e horário");
-      // Chama a função para criar horário
-      const newHorario = createHorario({ horario: horario, local: local});
+      // Chama a função para criar local e horário
+      const newHorario = createHorario({ local: local, horario: horario});
 
-      navigation.navigate('Tabsegundo',{ horario, local });
+      navigation.navigate('TelaFutMarcado',{ local, horario });
+
     } catch (error) {
       console.log(error);
     }
