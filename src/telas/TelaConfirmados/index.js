@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, TextInput, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, TouchableWithoutFeedback, Image, ScrollView} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { estilosConfirmados } from './estilos';
 import Modaldoidao from '../../componentes/Modal';
@@ -44,16 +44,19 @@ export default function TelaConfirmados() {
   const [modal,setModal]=useState(false);
 
   return (
-    
+
     <View style={estilosConfirmados.container}>
-
-
+      <View style={estilosConfirmados.icone}>
+        <TouchableOpacity style={estilosConfirmados.botaoVoltar} onPress={() => navigation.goBack()}>
+          <Image source={require('../../../assets/img_voltarTelaFutMarcado.png')}/>
+        </TouchableOpacity>
+      </View>
+      
       <Text style={estilosConfirmados.titulo}>Lista de Confirmados:</Text>
       <List data={data} delItem={delJogador}/>
-      <TouchableOpacity style={estilosConfirmados.botaoVoltar} onPress={() => navigation.goBack()}>
-        <Text style={{ color: '#FFF' }}> voltar</Text>
-      </TouchableOpacity>
-        
+      
+      
+
       <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={(jogador)=>registerJogador(jogador)}>
         <Text style={estilosConfirmados.textoBotaoAdicionar}>+</Text>
       </TouchableOpacity>
@@ -65,5 +68,6 @@ export default function TelaConfirmados() {
             transparent={true}
              />
     </View>
+
   );
 }

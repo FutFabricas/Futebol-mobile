@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, TextInput, TouchableOpacity, Alert} from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert,Image} from 'react-native';
 import { styles } from './estilos';
 
 
@@ -25,7 +25,7 @@ export default function TelaLogin({ navigation }) {
     
     <View style={styles.container}>
       <TouchableOpacity style={styles.botaoVoltar} onPress={() => navigation.goBack()}>
-        <Text style={{ color: '#FFF' }}> voltar</Text>
+        <Image source={require('../../../assets/img_voltarTelaFutMarcado.png')}/>
       </TouchableOpacity>
 
       <Text style={styles.titulo}>BEM-VINDO, CAPITÃO!</Text>

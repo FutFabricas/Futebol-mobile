@@ -10,17 +10,17 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 60,
   },
   titulo: {
-    fontFamily: 'Roboto',
-    fontSize: 24,
+    fontFamily: 'InterTitulos',
+    fontSize: 32,
     color: '#FFF',
-    marginBottom: 150,
+    marginBottom: 100,
     textAlign: 'center'
   },
   input: {
     height: 40,
     borderBottomWidth: 5,
     borderColor: '#92C357',
-    marginBottom: 75,
+    marginBottom:70,
     paddingHorizontal: 9,
     color: '#FFF',
   },
@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#92C357',
     background: 'linear-gradient(to right, #92C357, #6FAF46)',
-    marginTop: 150,
+    marginTop: 80,
     borderRadius: 20
   },
   textoBotao: {
@@ -39,16 +39,10 @@ export const styles = StyleSheet.create({
     fontFamily: 'Roboto',
   },
   botaoVoltar: {
-    position: 'absolute',
-    top: 20,
-    left: 20,
-    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 300,
+    marginTop: 30
   },
-  icone: {
-    position: 'absolute',
-    top: 20,
-    right: 20,
-    width: 32,
-    height: 32,
-  },
+  
 });
