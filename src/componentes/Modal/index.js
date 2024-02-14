@@ -5,7 +5,7 @@ import { createJogador } from '../../service/jogadores';
 import { useNavigation } from '@react-navigation/native';
 
 const Modaldoidao = ({ modalVisible, onPress }) => {
-  const navigation = useNavigation();
+  
   const [jogador, setJogador] = useState('');
 
   const fecharModal = () => {

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { estilosCadastro } from './estilos';
@@ -11,24 +11,24 @@ export default function TelaCadastro() {
   const [local, setLocal] = useState('');
   const [horario, setHorario] = useState('');
 
-  
+
   const salvarLocaleHorario = () => {
     try {
       console.log("===================Adicionando local e horário");
       navigation.navigate('Tabsegundo');
-      
+
       // Chama a função para criar horário
       const newHorario = createHorario({ horario: horario, local: local });
-      
-    
+
+
     } catch (error) {
       console.log(error);
     }
   };
-            
+
 
   return (
-    
+
     <View style={estilosCadastro.container}>
       <TouchableOpacity style={estilosCadastro.botaoVoltar} onPress={() => navigation.goBack()}>
         <Text style={{ color: '#FFF' }}> voltar</Text>
@@ -51,17 +51,17 @@ export default function TelaCadastro() {
         onChangeText={(text) => setHorario(text)}
       />
 
-                <Pressable 
-                style={estilosCadastro.botao}
-                onPress={() => salvarLocaleHorario()}
-                >
+      <Pressable
+        style={estilosCadastro.botao}
+        onPress={() => salvarLocaleHorario()}
+      >
 
-                <Text style={estilosCadastro.textoBotao}>Agendar FUT!</Text>
+        <Text style={estilosCadastro.textoBotao}>Agendar FUT!</Text>
 
-                  </Pressable>
-       
-      
+      </Pressable>
+
+
     </View>
-    
+
   );
 }

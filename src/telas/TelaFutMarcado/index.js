@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { useNavigation, useRoute, useEffect } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { estilosConfirmados } from './estilos';
 import { Image, ScrollView} from 'react-native';
 
@@ -13,8 +13,7 @@ export default function TelaFutMarcado() {
    const botaoAdicionarNome = () => {
     navigation.navigate('Confirmados')
    }
-
-              
+   
 
   return (
   <ScrollView>
@@ -39,14 +38,14 @@ export default function TelaFutMarcado() {
             <Image source={require('../../../assets/img_local.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>Local:</Text>
           </View>
-            <Text style={estilosConfirmados.textoInformativo2}>---</Text>
+            <Text style={estilosConfirmados.textoInformativo2}>...........................................</Text>
             
             
            <View style={estilosConfirmados.icones}>
             <Image source={require('../../../assets/img_relogio.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>Dia e Horário:</Text>
           </View>
-            <Text style={estilosConfirmados.textoInformativo2}>---</Text>
+            <Text style={estilosConfirmados.textoInformativo2}>...........................................</Text>
           <View style={estilosConfirmados.icones}>
             <Image source={require('../../../assets/img_dinheiro.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>R$ 20,00 - Por Pessoa</Text>
