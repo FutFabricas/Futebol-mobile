@@ -31,7 +31,7 @@ export const estilosCadastro = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#92C357',
     background: 'linear-gradient(to right, #92C357, #6FAF46)',
-    marginTop: 20,
+    marginTop: 200,
     borderRadius: 20
   },
   textoBotao: {

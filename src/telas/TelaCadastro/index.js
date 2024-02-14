@@ -8,8 +8,8 @@ import { estilosCadastro } from './estilos';
 export default function TelaCadastro() {
   const navigation = useNavigation();
 
-  const handleAgendarPress = () => {
-    alert("FUT MARCADO!!");
+  const aindaNada = () => {
+    alert("NADA ACONTECEU AINDA");
   };
 
   return (
@@ -33,19 +33,8 @@ export default function TelaCadastro() {
         placeholderTextColor="#888"
       />
 
-      <TextInput
-        style={estilosCadastro.input}
-        placeholder="Preço"
-        placeholderTextColor="#888"
-      />
 
-      <TextInput
-        style={estilosCadastro.input}
-        placeholder="Número de Jogadores"
-        placeholderTextColor="#888"
-      />
-
-      <TouchableOpacity style={estilosCadastro.botao} onPress={handleAgendarPress}>
+      <TouchableOpacity style={estilosCadastro.botao} onPress={aindaNada}>
         <Text style={estilosCadastro.textoBotao}>Agendar FUT!</Text>
       </TouchableOpacity>
       

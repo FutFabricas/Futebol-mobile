@@ -33,7 +33,7 @@ export default function TelaFutMarcado() {
             <Image source={require('../../../assets/img_local.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>Local:</Text>
           </View>
-            <Text style={estilosConfirmados.textoInformativo2}>Quadra Brasil</Text>
+            <Text style={estilosConfirmados.textoInformativo2}>Quadraaaa Brasil</Text>
             
            <View style={estilosConfirmados.icones}>
             <Image source={require('../../../assets/img_relogio.png')}/>
