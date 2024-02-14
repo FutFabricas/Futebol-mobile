@@ -67,14 +67,14 @@ export const styles = StyleSheet.create  ({
         color: '#6FAF46',
         width: 355,
         height: 70,
-        borderRadius: 15,
+        borderRadius: 20,
         backgroundColor: '#6FAF46',
         background: 'linear-gradient(to right, #92C357, #6FAF46)',
         fontFamily: 'InterRegular',
         fontSize: 30,
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: 150
+        marginBottom: 1
     },
 
     texto_botao: {
