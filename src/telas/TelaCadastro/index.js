@@ -53,6 +53,7 @@ export default function TelaCadastro() {
       </View>
       <View style={estilosCadastro.fundoObservacoes}>
         <Text style={estilosCadastro.textoObservacoes}>Observações:</Text>
+        <TextInput style={estilosCadastro.textoObservacoes}></TextInput>
       </View>
    
       <View style={estilosCadastro.icone}> 

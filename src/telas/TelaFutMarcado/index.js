@@ -52,7 +52,7 @@ export default function TelaFutMarcado() {
           </View>
             <Text style={estilosConfirmados.textoObs}> Observações: </Text>
           <View style={estilosConfirmados.fundoObs}>
-            <TextInput style = {estilosConfirmados.textoCaixaOBS}>Texto  </TextInput>
+            <Text style = {estilosConfirmados.textoCaixaOBS}>Texto do capitão</Text>
           </View>
 
           <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={botaoAdicionarNome}>
