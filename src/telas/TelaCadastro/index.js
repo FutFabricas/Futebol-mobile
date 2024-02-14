@@ -5,22 +5,20 @@ import { estilosCadastro } from './estilos';
 import { createHorario } from '../../service/horario';
 
 
-export default function TelaCadastro() {
+export default function TelaCadastro({navigation}) {
 
-  const navigation = useNavigation();
+  
   const [local, setLocal] = useState('');
   const [horario, setHorario] = useState('');
 
 
-  const salvarLocaleHorario = () => {
+  const salvarLocaleHorario = async () => {
     try {
       console.log("===================Adicionando local e horário");
-      navigation.navigate('Tabsegundo');
-
       // Chama a função para criar horário
-      const newHorario = createHorario({ horario: horario, local: local });
+      const newHorario = createHorario({ horario: horario, local: local});
 
-
+      navigation.navigate('Tabsegundo',{ horario, local });
     } catch (error) {
       console.log(error);
     }
@@ -55,9 +53,7 @@ export default function TelaCadastro() {
         style={estilosCadastro.botao}
         onPress={() => salvarLocaleHorario()}
       >
-
         <Text style={estilosCadastro.textoBotao}>Agendar FUT!</Text>
-
       </Pressable>
 
 
