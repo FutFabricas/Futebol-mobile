@@ -11,7 +11,7 @@ export default function TelaFutMarcado({route}) {
   const { params } = route;
   const local = params?.local || 'O FUT AINDA NÃO FOI MARCADO';
   const horario = params?.horario || 'O FUT AINDA NÃO FOI MARCADO';
-  console.log('Params recebidos:', params);
+  console.log('==============Params recebidos:', params);
 
    const navigation = useNavigation();
    const botaoAdicionarNome = () => {

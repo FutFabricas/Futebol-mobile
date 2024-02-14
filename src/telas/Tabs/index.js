@@ -8,7 +8,7 @@ import TelaFutMarcado from '../TelaFutMarcado';
 
 const Tab = createBottomTabNavigator();
 
-function Tabs() { // ESSA É A TABBAR DO CAPITÃO
+export default function Tabs() { // ESSA É A TABBAR DO CAPITÃO
   return (
     <Tab.Navigator
       tabBarOptions={{
@@ -43,4 +43,3 @@ function Tabs() { // ESSA É A TABBAR DO CAPITÃO
 }
 
 
-export default Tabs
