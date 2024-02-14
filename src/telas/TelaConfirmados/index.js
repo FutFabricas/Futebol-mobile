@@ -27,7 +27,7 @@ export default function TelaConfirmados() {
     } catch (error) {
       console.log(error);
     } finally {
-      setCarregando(false);
+      setCarregando(f);
     }
   }, []);
 
@@ -48,7 +48,7 @@ export default function TelaConfirmados() {
     <View style={estilosConfirmados.container}>
 
 
-      <Text style={estilosConfirmados.titulo}>Lista de Confirmados:</Text>
+      <Text style={estilosConfirmados.titulo}>Lista de Confirmados: {data.length}</Text>
       <List data={data} delItem={delJogador}/>
       <TouchableOpacity style={estilosConfirmados.botaoVoltar} onPress={() => navigation.goBack()}>
         <Text style={{ color: '#FFF' }}> voltar</Text>
