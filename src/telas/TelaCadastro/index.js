@@ -16,9 +16,9 @@ export default function TelaCadastro() {
     try {
       console.log("===================Adicionando local e horário");
       // Chama a função para criar local e horário
-      const newHorario = createHorario({ local: local, horario: horario});
+      const newHorario = await createHorario({ local: local, horario: horario});
 
-      navigation.navigate('TelaFutMarcado',{ local, horario });
+      navigation.navigate('Fut Marcado',{ local, horario });
 
     } catch (error) {
       console.log(error);

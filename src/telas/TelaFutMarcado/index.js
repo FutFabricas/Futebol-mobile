@@ -4,9 +4,6 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import { estilosConfirmados } from './estilos';
 import { Image, ScrollView} from 'react-native';
 
-
-
-
 export default function TelaFutMarcado({route}) {
   const { params } = route;
   const local = params?.local || 'O FUT AINDA NÃO FOI MARCADO';
@@ -33,8 +30,6 @@ export default function TelaFutMarcado({route}) {
       <View style={estilosConfirmados.container}>
         <Text style={estilosConfirmados.titulo}>FUT DA SEMANA</Text>
       </View>
-
-                                                              
 
       <View style={estilosConfirmados.fundoInfo}>
         
