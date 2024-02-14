@@ -78,7 +78,7 @@ export default function Home( { navigation } ) {
                 
         <View style={styles.container}> 
             <TouchableOpacity style={styles.botao_home} onPress={() => goToFut()}>
-                <Text style={styles.texto_botao}>VEM PRO FUT!</Text>
+                <Text style={styles.texto_botao}>IR PRO FUT!</Text>
             </TouchableOpacity>
         </View>
     </>

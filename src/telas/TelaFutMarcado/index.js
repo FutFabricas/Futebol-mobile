@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { useNavigation, useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute, useEffect } from '@react-navigation/native';
 import { estilosConfirmados } from './estilos';
 import { Image, ScrollView} from 'react-native';
 
@@ -12,11 +12,13 @@ export default function TelaFutMarcado() {
    const navigation = useNavigation();
    const botaoAdicionarNome = () => {
     navigation.navigate('Confirmados')
-
    }
+
+              
 
   return (
   <ScrollView>
+                
     <View style={estilosConfirmados.container}>
       
       <View style={estilosConfirmados.container}>

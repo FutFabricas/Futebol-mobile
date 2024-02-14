@@ -11,7 +11,7 @@ export default function TelaCadastro() {
   const navigation = useNavigation();
   const [local, setLocal] = useState('');
   const [horario, setHorario] = useState('');
-  const [dadosInput, setDadosInput] = useState('');
+
   
 
                 // const salvarLocaleHorario = async () => {
