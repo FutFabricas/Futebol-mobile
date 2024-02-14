@@ -31,7 +31,7 @@ export const estilosConfirmados = StyleSheet.create({
   titulo: {
     fontFamily: 'InterTitulos',
     fontSize: 22,
-    color: '#92C357',
+    color: 'white',
     height: 50
 },
   icones: {

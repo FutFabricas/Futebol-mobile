@@ -42,13 +42,13 @@ export default function TelaFutMarcado() {
             <Image source={require('../../../assets/img_local.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>Local:</Text>
           </View>
-            <Text style={estilosConfirmados.textoInformativo2}>Quadra Brasil</Text>
+            <Text style={estilosConfirmados.textoInformativo2}>---------------------</Text>
             
            <View style={estilosConfirmados.icones}>
             <Image source={require('../../../assets/img_relogio.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>Dia e Horário:</Text>
           </View>
-            <Text style={estilosConfirmados.textoInformativo2}> 17/02/2024 - 9hrs</Text>
+            <Text style={estilosConfirmados.textoInformativo2}>---------------------</Text>
           <View style={estilosConfirmados.icones}>
             <Image source={require('../../../assets/img_dinheiro.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>R$ 20,00 - Por Pessoa</Text>
