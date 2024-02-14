@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Modal, Text, Pressable, View, TextInput, Button } from 'react-native';
 import { styles } from './estilos';
 import { createJogador } from '../../service/jogadores';
-import { useNavigation } from '@react-navigation/native';
+
 
 const Modaldoidao = ({ modalVisible, onPress }) => {
-  const navigation = useNavigation();
+  
   const [jogador, setJogador] = useState('');
 
   const fecharModal = () => {

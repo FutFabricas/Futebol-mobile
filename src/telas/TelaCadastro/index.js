@@ -1,19 +1,35 @@
-import React, {useEffect, useState} from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { estilosCadastro } from './estilos';
-
+import { updateFutMarcado } from '../../service/horario';
+import { ID_HORARIO } from '../../help/const';
 
 
 export default function TelaCadastro() {
-  const navigation = useNavigation();
 
-  const handleAgendarPress = () => {
-    alert("FUT MARCADO!!");
+  const navigation = useNavigation();
+  const [local, setLocal] = useState('');
+  const [horario, setHorario] = useState('');
+  
+
+
+  const salvarLocaleHorario = async () => {
+    try {
+      console.log("===================Adicionando local e horário");
+      // Chama a função para criar local e horário
+      const newHorario = await updateFutMarcado({ local: local, horario: horario, id: ID_HORARIO});
+      
+      navigation.navigate('Fut Marcado',{ local, horario });
+
+    } catch (error) {
+      console.log(error);
+    }
   };
 
+
   return (
-    
+
     <View style={estilosCadastro.container}>
       <TouchableOpacity style={estilosCadastro.botaoVoltar} onPress={() => navigation.goBack()}>
         <Text style={{ color: '#FFF' }}> voltar</Text>
@@ -25,31 +41,26 @@ export default function TelaCadastro() {
         style={estilosCadastro.input}
         placeholder="Local"
         placeholderTextColor="#888"
+        onChangeText={(text) => setLocal(text)}
       />
+
 
       <TextInput
         style={estilosCadastro.input}
-        placeholder="Horário"
+        placeholder="Data e Hora"
         placeholderTextColor="#888"
+        onChangeText={(text) => setHorario(text)}
       />
 
-      <TextInput
-        style={estilosCadastro.input}
-        placeholder="Preço"
-        placeholderTextColor="#888"
-      />
-
-      <TextInput
-        style={estilosCadastro.input}
-        placeholder="Número de Jogadores"
-        placeholderTextColor="#888"
-      />
-
-      <TouchableOpacity style={estilosCadastro.botao} onPress={handleAgendarPress}>
+      <Pressable
+        style={estilosCadastro.botao}
+        onPress={() => salvarLocaleHorario()}
+      >
         <Text style={estilosCadastro.textoBotao}>Agendar FUT!</Text>
-      </TouchableOpacity>
-      
+      </Pressable>
+
+
     </View>
-    
+
   );
 }
