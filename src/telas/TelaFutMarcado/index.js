@@ -4,9 +4,12 @@ import { useNavigation } from '@react-navigation/native';
 import { estilosConfirmados } from './estilos';
 import { Image, ScrollView} from 'react-native';
 
+import { useRoute } from '@react-navigation/native';
+
 
 export default function TelaFutMarcado() {
-
+   const route = useRoute();
+    // const { local, horario } = route.params;
    const navigation = useNavigation();
 
    const botaoAdicionarNome = () => {
@@ -26,6 +29,11 @@ export default function TelaFutMarcado() {
       <View style={estilosConfirmados.container}>
         <Text style={estilosConfirmados.titulo}>FUT DA SEMANA</Text>
       </View>
+
+                                                                   {/* <View>
+                                                                    <Text style={{color: 'white'}}>Local: {local}</Text>
+                                                                   <Text style={{color: 'white'}}>Horario: {horario}</Text>
+                                                                   </View> */}
 
       <View style={estilosConfirmados.fundoInfo}>
         

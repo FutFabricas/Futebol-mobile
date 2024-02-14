@@ -3,30 +3,48 @@ import { View, Text, TextInput, TouchableOpacity, Pressable } from 'react-native
 import { useNavigation } from '@react-navigation/native';
 import { estilosCadastro } from './estilos';
 import { createLocal } from '../../service/local';
-
+import { createHorario } from '../../service/horario';
 
 
 export default function TelaCadastro() {
+
   const navigation = useNavigation();
   const [local, setLocal] = useState('');
-  const aindaNada = () => {
-    alert("NADA ACONTECEU AINDA");
-  };
+  const [horario, setHorario] = useState('');
+  const [dadosInput, setDadosInput] = useState('');
+  
 
-                const salvarLocal = async () => {
+                // const salvarLocaleHorario = async () => {
+                //   try {
+                //     console.log("Adicionando local")
+                //     const newHorario = await createHorario ({ horario: horario});
+                //     onPress(newHorario);
+                //     const newLocal = await createLocal({ local: local }); //aqui sou eu tentando adicionar o local
+                //     onPress(newLocal);
+                //   } catch (error) {
+                //     console.log(error);
+                //   }
+                // };
+                //ACIMA FOI A PRIMEIRA TENTATIVA E DEU ERRADO
+
+                const salvarLocaleHorario = () => {
                   try {
-                    console.log("Adicionando local")
-                    const newLocal = await createLocal({ local: local }); //aqui sou eu tentando adicionar o local
-                    onPress(newLocal);
+                    console.log("Adicionando local e horário");
+                    navigation.navigate('TelaFutMarcado', { local, horario })
+                    
+                    // Chama a função para criar horário
+                    const newHorario = createHorario({ horario: horario });
+                    
+                    // Chama a função para criar local
+                    const newLocal = createLocal({ local: local });
+                    
+                    // Executa a ação onPress com ambas as informações
+                    onPress(newHorario, newLocal);
                   } catch (error) {
                     console.log(error);
                   }
                 };
-
-                const registerLocal = (local) => {
-                  console.log("==========",local);
-                  setData((ant)=>[...ant,local]);
-                }
+            
 
   return (
     
@@ -47,13 +65,14 @@ export default function TelaCadastro() {
 
       <TextInput
         style={estilosCadastro.input}
-        placeholder="Horário"
+        placeholder="Data e Hora"
         placeholderTextColor="#888"
+        onChangeText={(text) => setHorario(text)}
       />
 
                 <Pressable 
                 style={estilosCadastro.botao}
-                onPress={() => salvarLocal()}
+                onPress={() => salvarLocaleHorario()}
                 >
 
                 <Text style={estilosCadastro.textoBotao}>Agendar FUT!</Text>
