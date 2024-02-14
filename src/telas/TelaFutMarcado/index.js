@@ -1,14 +1,43 @@
-import React from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { estilosConfirmados } from './estilos';
 import { Image, ScrollView} from 'react-native';
+import { getFutMarcadoByid } from '../../service/horario';
+import { ID_HORARIO } from '../../help/const';
 
 export default function TelaFutMarcado({route}) {
   const { params } = route;
-  const local = params?.local || 'O FUT AINDA NÃO FOI MARCADO';
-  const horario = params?.horario || 'O FUT AINDA NÃO FOI MARCADO';
+  
+  const localParam = params?.local;
+  const horarioParam = params?.horario;
+
+  
+  const [local,setLocal] =useState(localParam);
+  const [horario,setHorario] =useState(horarioParam);
+
+
+  const get = useCallback(async () => {
+    try {
+      console.log("================",ID_HORARIO)
+      const response = await getFutMarcadoByid(ID_HORARIO);
+      console.log("============oq ta vindo?",response)
+      setHorario(response.horario);
+      setLocal(response.local)
+
+     
+    } catch (error) {
+      console.log(error);
+    } 
+  }, []);
+
+  useEffect(() => {
+    get();
+  }, [get]);
+
   console.log('==============Params recebidos:', params);
+
+
 
    const navigation = useNavigation();
    const botaoAdicionarNome = () => {

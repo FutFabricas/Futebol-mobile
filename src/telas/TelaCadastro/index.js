@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { estilosCadastro } from './estilos';
-import { createHorario } from '../../service/horario';
+import { updateFutMarcado } from '../../service/horario';
+import { ID_HORARIO } from '../../help/const';
 
 
 export default function TelaCadastro() {
@@ -10,14 +11,15 @@ export default function TelaCadastro() {
   const navigation = useNavigation();
   const [local, setLocal] = useState('');
   const [horario, setHorario] = useState('');
+  
 
 
   const salvarLocaleHorario = async () => {
     try {
       console.log("===================Adicionando local e horário");
       // Chama a função para criar local e horário
-      const newHorario = await createHorario({ local: local, horario: horario});
-
+      const newHorario = await updateFutMarcado({ local: local, horario: horario, id: ID_HORARIO});
+      
       navigation.navigate('Fut Marcado',{ local, horario });
 
     } catch (error) {
