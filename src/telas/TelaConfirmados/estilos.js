@@ -9,7 +9,7 @@ export const estilosConfirmados = StyleSheet.create({
   },
   titulo: {
     fontFamily: 'Roboto',
-    fontSize: 35,
+    fontSize: 30,
     color: '#FFF',
     height: 150,
     top: 50
