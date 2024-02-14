@@ -16,11 +16,11 @@ export const styles = StyleSheet.create({
     color: 'white',
   },
   delButton: {
-    backgroundColor: 'green',
+    backgroundColor: 'red',
     padding: 10,
-    borderRadius: 5,
+    borderRadius: 5
   },
   delButtonText: {
-    color: 'white',
+    color: 'white'
   }
 });

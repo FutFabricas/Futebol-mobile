@@ -17,7 +17,7 @@ function Item({ data, delItem }) {
     <View style={styles.item}>
       <Text style={[styles.title, { marginRight: 50 }]}>{data?.name}</Text>
       <TouchableOpacity onPress={delJogador} style={styles.delButton}>
-        <Text style={styles.delButtonText}>DEL</Text>
+        <Text style={styles.delButtonText}>X</Text>
       </TouchableOpacity>
     </View>
   );
