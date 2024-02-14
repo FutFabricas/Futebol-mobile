@@ -30,16 +30,16 @@ export default function TelaCadastro() {
                 const salvarLocaleHorario = () => {
                   try {
                     console.log("Adicionando local e horário");
-                    navigation.navigate('Tabsegundo')
+                    navigation.navigate('Tabsegundo');
                     
                     // Chama a função para criar horário
-                    const newHorario = createHorario({ horario: horario });
+                    const newHorario = createHorario({ horario: horario, local: local });
                     
                     // Chama a função para criar local
-                    const newLocal = createLocal({ local: local });
+                    // const newLocal = createLocal({ local: local });
                     
                     // Executa a ação onPress com ambas as informações
-                    onPress(newHorario, newLocal);
+                    onPress(newHorario);
                   } catch (error) {
                     console.log(error);
                   }
