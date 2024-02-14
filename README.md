@@ -30,6 +30,14 @@ rodar
 npm i -S <lib>
 ```
 
+#### Fazer o banco funcionar
+
+criar na raíz do projeto:
+```
+.env
+```
+dentro dessa pasta colocar esse código:
+EXPO_PUBLIC_URL = https://65c95f1a3b05d29307de8a2a.mockapi.io/api/v1/
 
 ### 💾Versão das Ferramentas:
 * Node:  20.11.0
