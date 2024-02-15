@@ -1,7 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, ScrollView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image, ScrollView,Pressable} from 'react-native';
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { estilosCadastro } from './estilos';
 import { updateFutMarcado } from '../../service/horario';
@@ -14,8 +12,6 @@ export default function TelaCadastro() {
   const [local, setLocal] = useState('');
   const [horario, setHorario] = useState('');
   
-
-
   const salvarLocaleHorario = async () => {
     try {
       console.log("===================Adicionando local e horário");
@@ -45,7 +41,47 @@ export default function TelaCadastro() {
         <Text style={estilosCadastro.titulo}>Agende o FUT!</Text>
         </View>
 
-      <View style={estilosCadastro.viewInputs}>
+        <TextInput
+        style={estilosCadastro.input}
+      placeholder="Local"
+     placeholderTextColor="#888"
+       onChangeText={(text) => setLocal(text)}
+      />
+
+
+      <TextInput
+         style={estilosCadastro.input}
+        placeholder="Data e Hora"
+         placeholderTextColor="#888"
+         onChangeText={(text) => setHorario(text)}
+       />
+
+       <Pressable
+        style={estilosCadastro.botao}
+         onPress={() => salvarLocaleHorario()}
+         >
+
+         <Text style={estilosCadastro.textoBotao}>Agendar FUT!</Text>
+
+        </Pressable>
+      
+      <View style={estilosCadastro.fundoObservacoes}>
+        <Text style={estilosCadastro.textoObservacoes}>Observações:</Text>
+        <TextInput style={estilosCadastro.textoObservacoes}></TextInput>
+      </View>
+   
+      <View style={estilosCadastro.icone}> 
+      <TouchableOpacity style={estilosCadastro.botao} onPress={handleAgendarPress}>
+        <Text style={estilosCadastro.textoBotao}>Agendar FUT!</Text>
+      </TouchableOpacity>
+      </View>
+
+     </View>
+     
+    </ScrollView> 
+  )};
+
+  {/* <View style={estilosCadastro.viewInputs}>
         <TextInput
             style={estilosCadastro.input}
             placeholder="Local"
@@ -69,47 +105,4 @@ export default function TelaCadastro() {
             placeholder="Número de Jogadores"
             placeholderTextColor="#888"
           />
-      </View>
-      <View style={estilosCadastro.fundoObservacoes}>
-        <Text style={estilosCadastro.textoObservacoes}>Observações:</Text>
-        <TextInput style={estilosCadastro.textoObservacoes}></TextInput>
-      </View>
-   
-      <View style={estilosCadastro.icone}> 
-      <TouchableOpacity style={estilosCadastro.botao} onPress={handleAgendarPress}>
-        <Text style={estilosCadastro.textoBotao}>Agendar FUT!</Text>
-      </TouchableOpacity>
-      </View>
-      
-      
-   </View>
-   </ScrollView>
-
-    )};
-//       <TextInput
-//         style={estilosCadastro.input}
-//         placeholder="Local"
-//         placeholderTextColor="#888"
-//         onChangeText={(text) => setLocal(text)}
-//       />
-
-
-//       <TextInput
-//         style={estilosCadastro.input}
-//         placeholder="Data e Hora"
-//         placeholderTextColor="#888"
-//         onChangeText={(text) => setHorario(text)}
-//       />
-
-//       <Pressable
-//         style={estilosCadastro.botao}
-//         onPress={() => salvarLocaleHorario()}
-//       >
-//         <Text style={estilosCadastro.textoBotao}>Agendar FUT!</Text>
-//       </Pressable>
-
-
-//     </View>
-
-//   );
-// }
+      </View> */}
