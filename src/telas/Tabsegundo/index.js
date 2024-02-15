@@ -4,7 +4,7 @@ import TelaFutMarcado from '../TelaFutMarcado';
 
 const Tab = createBottomTabNavigator();
 
-export default function Tabsegundo() {
+export default function Tabsegundo() { //ESSA É A TABBAR DO USUÁRIO
   return (
     <Tab.Navigator
       tabBarOptions={{

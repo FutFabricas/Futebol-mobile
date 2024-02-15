@@ -1,20 +1,53 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, TextInput } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import React, { useState, useCallback, useEffect } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { estilosConfirmados } from './estilos';
 import { Image, ScrollView} from 'react-native';
+import { getFutMarcadoByid } from '../../service/horario';
+import { ID_HORARIO } from '../../help/const';
+
+export default function TelaFutMarcado({route}) {
+  const { params } = route;
+  
+  const localParam = params?.local;
+  const horarioParam = params?.horario;
+
+  
+  const [local,setLocal] =useState(localParam);
+  const [horario,setHorario] =useState(horarioParam);
 
 
-export default function TelaFutMarcado() {
+  const get = useCallback(async () => {
+    try {
+      console.log("================",ID_HORARIO)
+      const response = await getFutMarcadoByid(ID_HORARIO);
+      console.log("============oq ta vindo?",response)
+      setHorario(response.horario);
+      setLocal(response.local)
+
+     
+    } catch (error) {
+      console.log(error);
+    } 
+  }, []);
+
+  useEffect(() => {
+    get();
+  }, [get]);
+
+  console.log('==============Params recebidos:', params);
+
+
 
    const navigation = useNavigation();
-
    const botaoAdicionarNome = () => {
-    alert("Você vai pra tela de adicionar seu nome")
+    navigation.navigate('Confirmados')
    }
+   
 
   return (
   <ScrollView>
+                
     <View style={estilosConfirmados.container}>
       
       <View style={estilosConfirmados.container}>
@@ -33,13 +66,14 @@ export default function TelaFutMarcado() {
             <Image source={require('../../../assets/img_local.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>Local:</Text>
           </View>
-            <Text style={estilosConfirmados.textoInformativo2}>Quadra Brasil</Text>
+            <Text style={estilosConfirmados.textoInformativo2}>---{local}---</Text>
+            
             
            <View style={estilosConfirmados.icones}>
             <Image source={require('../../../assets/img_relogio.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>Dia e Horário:</Text>
           </View>
-            <Text style={estilosConfirmados.textoInformativo2}> 17/02/2024 - 9hrs</Text>
+            <Text style={estilosConfirmados.textoInformativo2}>---{horario}---</Text>
           <View style={estilosConfirmados.icones}>
             <Image source={require('../../../assets/img_dinheiro.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>R$ 20,00 - Por Pessoa</Text>
@@ -56,7 +90,7 @@ export default function TelaFutMarcado() {
           </View>
 
           <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={botaoAdicionarNome}>
-            <Text style={estilosConfirmados.textoBotaoAdicionar}>Participar</Text>
+            <Text style={estilosConfirmados.textoBotaoAdicionar}>Me coloque na lista!</Text>
 
           </TouchableOpacity>
 

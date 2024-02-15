@@ -27,7 +27,7 @@ export default function TelaConfirmados() {
     } catch (error) {
       console.log(error);
     } finally {
-      setCarregando(false);
+      setCarregando(f);
     }
   }, []);
 
@@ -51,8 +51,8 @@ export default function TelaConfirmados() {
           <Image source={require('../../../assets/img_voltarTelaFutMarcado.png')}/>
         </TouchableOpacity>
       </View>
-      
-      <Text style={estilosConfirmados.titulo}>Lista de Confirmados:</Text>
+
+      <Text style={estilosConfirmados.titulo}>Lista de Confirmados: {data.length}</Text>
       <List data={data} delItem={delJogador}/>
       
       
