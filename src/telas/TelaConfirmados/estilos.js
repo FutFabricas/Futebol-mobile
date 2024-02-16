@@ -7,12 +7,17 @@ export const estilosConfirmados = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  icone:{
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   titulo: {
-    fontFamily: 'Roboto',
-    fontSize: 30,
+    fontFamily: 'InterTitulos',
+    fontSize: 32,
     color: '#FFF',
-    height: 150,
-    top: 50
+    height: 40,
 },
   botaoAdicionar: {
     width: 35,
@@ -52,16 +57,13 @@ export const estilosConfirmados = StyleSheet.create({
     fontFamily: 'Roboto',
   },
   querojogar: {
-    fontFamily: 'Roboto',
+    fontFamily: 'InterBold700',
     fontSize: 16,
     color: '#FFF',
-    marginBottom: 15,
-    bottom: 1
+    marginTop: 10,
   },
   botaoVoltar: {
-    position: 'absolute',
-    top: 10,
-    left: 20,
-    padding: 10,
+    marginRight: 300,
+    marginVertical: 10
   }
 });

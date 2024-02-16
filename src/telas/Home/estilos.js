@@ -13,9 +13,8 @@ export const styles = StyleSheet.create  ({
 
     icons_home:{
         justifyContent: 'center',
-        alignItems: 'center'
-
-
+        alignItems: 'center',
+        flexDirection: 'row'
     },
 
     botao_home_topo:{
@@ -34,6 +33,7 @@ export const styles = StyleSheet.create  ({
 
     home_topo:{
         flexDirection: 'row',
+        alignItems: 'center',
         justifyContent: 'space-between',
         backgroundColor: '#242323'
     },  

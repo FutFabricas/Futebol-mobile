@@ -7,13 +7,40 @@ export const estilosCadastro = StyleSheet.create({
     flex: 1,
     backgroundColor: '#242323',
     justifyContent: 'center',
-    paddingHorizontal: 60,
   },
-  titulo: {
-    fontFamily: 'Roboto',
-    fontSize: 24,
+
+
+  viewInputs:{
+    paddingHorizontal: 60,
+    justifyContent: 'center',
+    flexDirection: 'column'
+  },
+
+  icone: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  fundoObservacoes:{
+    marginHorizontal: 60,
+    backgroundColor: 'rgba(146, 195, 87, 0.3)',
+    height: 200,
+    borderRadius: 10,
+  },
+
+  textoObservacoes:{
     color: '#FFF',
-    marginBottom: 150,
+    fontFamily: 'InterBold700',
+    textAlign: 'center'
+  },
+
+
+  titulo: {
+    fontFamily: 'InterTitulos',
+    fontSize: 26,
+    color: '#92C357',
+    marginBottom: 100,
+    marginTop: 50,
     textAlign: 'center'
   },
   input: {
@@ -25,30 +52,26 @@ export const estilosCadastro = StyleSheet.create({
     color: '#FFF',
   },
   botao: {
-    height: 40,
+    width: 270,
+    height: 55,
     borderRadius: 3,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#92C357',
     background: 'linear-gradient(to right, #92C357, #6FAF46)',
+    marginVertical: 40,
     marginTop: 100,
     borderRadius: 20
   },
   textoBotao: {
+
+    fontSize: 20,
     color: '#FFF',
-    fontFamily: 'Roboto',
+    fontFamily: 'InterBold700',
   },
   botaoVoltar: {
-    position: 'absolute',
-    top: 20,
-    left: 20,
-    padding: 10,
-  },
-  icone: {
-    position: 'absolute',
-    top: 20,
-    right: 20,
-    width: 32,
-    height: 32,
+    top:40,
+    margin: 20,
+    marginRight: 300
   },
 });

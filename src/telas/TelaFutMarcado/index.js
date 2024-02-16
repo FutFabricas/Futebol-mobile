@@ -1,8 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, Image,ScrollView} from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { estilosConfirmados } from './estilos';
-import { Image, ScrollView} from 'react-native';
 import { getFutMarcadoByid } from '../../service/horario';
 import { ID_HORARIO } from '../../help/const';
 
@@ -86,7 +85,7 @@ export default function TelaFutMarcado({route}) {
           </View>
             <Text style={estilosConfirmados.textoObs}> Observações: </Text>
           <View style={estilosConfirmados.fundoObs}>
-            <Text style = {estilosConfirmados.textoCaixaOBS}>Texto aleatóriodaklwd </Text>
+            <Text style = {estilosConfirmados.textoCaixaOBS}>Texto do capitão</Text>
           </View>
 
           <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={botaoAdicionarNome}>
@@ -94,8 +93,7 @@ export default function TelaFutMarcado({route}) {
 
           </TouchableOpacity>
 
-      </View>
-      
+        </View>
       </View>
     </ScrollView>
   );

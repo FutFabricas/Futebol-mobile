@@ -40,10 +40,9 @@ export default function Home( { navigation } ) {
                 <Image
                     source={
                         require('../../../assets/icon_sair.png')}
-                    style={{ width: 29 , height: 29 }}
+                    style={{ width: 30 , height: 30 }}
 
                 />
-                        <Text style={{ color: '#FFF' }}>SAIR</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
@@ -53,14 +52,9 @@ export default function Home( { navigation } ) {
                 <Image
                     
                     source={require('../../../assets/icon_capitaocolorido32.png')}
-                    style={{width: 29, height: 29}}
+                    style={{width: 32, height: 32}}
                     
                 />
-                <Text
-                    style={styles.texto_botao_home_topo}>
-                    
-
-                </Text>
             </TouchableOpacity>
         </View>
 
