@@ -6,16 +6,12 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#242323',
-    // justifyContent: 'center',
-    // alignItems: 'center',
     
   },
 
   icone:{
     justifyContent: 'center',
     marginHorizontal: 50
-
-
   },
 
   titulo: {
@@ -52,7 +48,7 @@ export const styles = StyleSheet.create({
 
   botaoVoltar: {
     marginTop: 30,
-    marginRight: 300,
+    marginLeft: 20,
     marginBottom: 80
     
     
