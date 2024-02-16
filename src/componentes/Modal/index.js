@@ -38,7 +38,7 @@ const Modaldoidao = ({ modalVisible, onPress }) => {
             onChangeText={(text) => setJogador(text)}
           />
           <Pressable
-            style={[styles.button, styles.buttonClose]}
+            style={[styles.button, styles.buttonOpen]}
             onPress={() => salvarNaLista()}>
             <Text style={styles.textStyle}>Confirmar Presença!</Text>
           </Pressable>
@@ -47,7 +47,7 @@ const Modaldoidao = ({ modalVisible, onPress }) => {
             style={[styles.button, styles.buttonClose]}
             onPress={fecharModal}
           >
-            <Text style={styles.textStyle}>Fechar</Text>
+            <Text style={styles.textStyle_fechar}>Fechar</Text>
           </Pressable>
         </View>
       </View>

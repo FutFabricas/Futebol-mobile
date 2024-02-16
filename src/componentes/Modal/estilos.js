@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     },
     modalView: {
       margin: 20,
-      backgroundColor: '#000000',
+      backgroundColor: '#2F2F2F',
       borderRadius: 10,
       height: 380,
       width: 350,
@@ -37,8 +37,15 @@ export const styles = StyleSheet.create({
     buttonOpen: {
       backgroundColor: 'green',
     },
+    textStyle_fechar:{
+      width:100,
+      textAlign:"center",
+      color:"white",
+    },
     buttonClose: {
-      backgroundColor: 'green',
+      backgroundColor: 'red',
+      width:130,
+
     },
     textStyle: {
       color: 'white',
@@ -60,20 +67,8 @@ export const styles = StyleSheet.create({
       color: '#fff',
 
 
-    },
-      absolute: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-      },
-      modalContainer: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      },
-    });
-    
+    }
 
+
+  });
 
