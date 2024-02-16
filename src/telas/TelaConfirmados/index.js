@@ -39,6 +39,7 @@ export default function TelaConfirmados() {
     console.log("==========",jogador);
     setData((ant)=>[...ant,jogador]); //o set data pega oq ele tem dentro e adiciona o jogador, garantindo o dado dentro do data
     setModal(!modal);
+    getJogadores();
   }
   
   const [modal,setModal]=useState(false);
@@ -52,7 +53,8 @@ export default function TelaConfirmados() {
         </TouchableOpacity>
       </View>
 
-      <Text style={estilosConfirmados.titulo}>Lista de Confirmados: {data.length}</Text>
+      <Text style={estilosConfirmados.titulo}>Lista de Confirmados</Text>
+      <Text style={estilosConfirmados.titulo}> {data.length}</Text>
       <List data={data} delItem={delJogador}/>
       
       
