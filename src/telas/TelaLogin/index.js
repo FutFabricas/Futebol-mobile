@@ -24,34 +24,40 @@ export default function TelaLogin({ navigation }) {
   return (
     
     <View style={styles.container}>
-      <TouchableOpacity style={styles.botaoVoltar} onPress={() => navigation.goBack()}>
-        <Image source={require('../../../assets/img_voltarTelaFutMarcado.png')}/>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.botaoVoltar} onPress={() => navigation.goBack()}>
+          <Image source={require('../../../assets/img_voltarTelaFutMarcado.png')}/>
+        </TouchableOpacity>
 
+        
+
+
+      <View style={styles.icone}>
       <Text style={styles.titulo}>BEM-VINDO, CAPITÃO!</Text>
+        
+        <TextInput
+          style={styles.input}
+          placeholder="Login"
+          placeholderTextColor="#888"
+          onChangeText={(text) => setUsername(text)}
+        />
 
-      <TextInput
-        style={styles.input}
-        placeholder="Login"
-        placeholderTextColor="#888"
-        onChangeText={(text) => setUsername(text)}
-      />
+        <TextInput           
+          style={styles.input}
+          placeholder="Senha"
+          placeholderTextColor="#888"
+          secureTextEntry
+          onChangeText={(text) => setPassword(text)}
+        />
 
-      <TextInput           
-        style={styles.input}
-        placeholder="Senha"
-        placeholderTextColor="#888"
-        secureTextEntry
-        onChangeText={(text) => setPassword(text)}
-      />
-
-    <TouchableOpacity style={styles.botao} onPress={botaoEntrar}>
-      <Text style={styles.textoBotao}> ENTRAR </Text>
-    </TouchableOpacity>
+        <TouchableOpacity style={styles.botao} onPress={botaoEntrar}>
+        <Text style={styles.textoBotao}> ENTRAR </Text>
+        </TouchableOpacity>
+      </View>
+      
 
     </View>
 
 
 
-  );
+  )
 };

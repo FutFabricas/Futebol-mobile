@@ -6,9 +6,18 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#242323',
-    justifyContent: 'center',
-    paddingHorizontal: 60,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    
   },
+
+  icone:{
+    justifyContent: 'center',
+    marginHorizontal: 50
+
+
+  },
+
   titulo: {
     fontFamily: 'InterTitulos',
     fontSize: 32,
@@ -16,6 +25,7 @@ export const styles = StyleSheet.create({
     marginBottom: 100,
     textAlign: 'center'
   },
+
   input: {
     height: 40,
     borderBottomWidth: 5,
@@ -34,15 +44,18 @@ export const styles = StyleSheet.create({
     marginTop: 80,
     borderRadius: 20
   },
+
   textoBotao: {
     color: '#FFF',
-    fontFamily: 'Roboto',
+    fontFamily: 'InterBold700',
   },
+
   botaoVoltar: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    marginTop: 30,
     marginRight: 300,
-    marginTop: 30
+    marginBottom: 80
+    
+    
   },
   
 });
