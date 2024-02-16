@@ -33,8 +33,8 @@ const Modaldoidao = ({ modalVisible, onPress }) => {
         <View style={styles.modalView}>
           <TextInput
             style={styles.input}
-            placeholder="Digite seu nome ..."
-            placeholderTextColor="black"
+            placeholder="Digite seu nome"
+            placeholderTextColor="white" 
             onChangeText={(text) => setJogador(text)}
           />
           <Pressable
