@@ -19,6 +19,14 @@
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c28aafa1-7e7c-4a9a-bfa8-843e29474221"
+      }
+    },
+    "android": {
+      "package": "com.luisfernando007.futfabricas"
+    }
   }
 }
