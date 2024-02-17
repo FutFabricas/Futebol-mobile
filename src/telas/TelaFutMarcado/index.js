@@ -44,7 +44,8 @@ export default function TelaFutMarcado({route}) {
    }
    
 
-  return (                
+  return (  
+    <ScrollView>              
     <View style={estilosConfirmados.container}>
       
       <View style={estilosConfirmados.container}>
@@ -75,8 +76,8 @@ export default function TelaFutMarcado({route}) {
             <Image source={require('../../../assets/img_dinheiro.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>Valores:</Text>
           </View>
-          <Text style={estilosConfirmados.textoInformativo2}>R$ 130,00 - Quadra-Brasil</Text>
-          <Text style={estilosConfirmados.textoInformativo2}>R$ 120,00 - Quadra-Impacto</Text>
+          <Text style={estilosConfirmados.textoInformativo2}>R$ 130,00 (1hr) - Quadra-Brasil</Text>
+          <Text style={estilosConfirmados.textoInformativo2}>R$ 120,00 (1hr) - Quadra-Impacto</Text>
 
 
 
@@ -88,7 +89,7 @@ export default function TelaFutMarcado({route}) {
             <Text style={estilosConfirmados.textoBotaoAdicionar}>Me coloque na lista!</Text>
           </TouchableOpacity>
         </View>
-        
       </View>
+    </ScrollView>
   )
 };

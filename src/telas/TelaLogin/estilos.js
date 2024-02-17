@@ -31,13 +31,13 @@ export const styles = StyleSheet.create({
     color: '#FFF',
   },
   botao: {
-    height: 40,
+    height: 55,
     borderRadius: 3,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#92C357',
     background: 'linear-gradient(to right, #92C357, #6FAF46)',
-    marginTop: 80,
+    marginTop: 20,
     borderRadius: 20
   },
 
@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
   botaoVoltar: {
     marginTop: 30,
     marginLeft: 20,
-    marginBottom: 80
+    marginBottom: 35
     
     
   },

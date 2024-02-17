@@ -9,10 +9,10 @@ export const estilosConfirmados = StyleSheet.create({
   },
 
   fundoInfo:{
-    marginVertical:0,
+    marginVertical:20,
     justifyContent: 'center',
-    backgroundColor: '#28530C',
-    height: 580,
+    backgroundColor: 'rgba(180, 180, 184, .15)',
+    height: 600,
     width: 300,
     borderRadius: 20,
 
@@ -67,7 +67,7 @@ export const estilosConfirmados = StyleSheet.create({
     height: 55,
     borderRadius: 25,
     // backgroundColor: '#789461',
-    backgroundColor: '#A4D767',
+    backgroundColor: '#92C357',
     justifyContent: 'center',
     alignItems: 'center',
 

@@ -27,10 +27,7 @@ export default function TelaLogin({ navigation }) {
         <TouchableOpacity style={styles.botaoVoltar} onPress={() => navigation.goBack()}>
           <Image source={require('../../../assets/img_voltarTelaFutMarcado.png')}/>
         </TouchableOpacity>
-
         
-
-
       <View style={styles.icone}>
       <Text style={styles.titulo}>BEM-VINDO, CAPITÃO!</Text>
         
