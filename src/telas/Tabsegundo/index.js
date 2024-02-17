@@ -27,7 +27,7 @@ export default function Tabsegundo() { //ESSA É A TABBAR DO USUÁRIO
         },
         keyboardHidesTabBar: true //quando clicar nos inputs o teclado vai ficar por cima da TabBar
       }}>
-  
+
 
       <Tab.Screen name ="Fut Marcado" component={TelaFutMarcado} options={{ headerShown: false}}/>
       <Tab.Screen name="Confirmados" component={TelaConfirmados} options={{ headerShown: false}}/>

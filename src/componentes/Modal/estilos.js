@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     },
     modalView: {
       margin: 20,
-      backgroundColor: 'white',
+      backgroundColor: '#2F2F2F',
       borderRadius: 10,
       height: 380,
       width: 350,
@@ -37,35 +37,38 @@ export const styles = StyleSheet.create({
     buttonOpen: {
       backgroundColor: 'green',
     },
+    textStyle_fechar:{
+      width:100,
+      textAlign:"center",
+      color:"white",
+    },
     buttonClose: {
-      backgroundColor: 'green',
+      backgroundColor: 'red',
+      width:130,
+
     },
     textStyle: {
       color: 'white',
       fontWeight: 'bold',
       textAlign: 'center',
-      width: 150
+      width: 200
     },
     modalText: {
       marginBottom: 15,
       textAlign: 'center',
     },
     input: {
-      fontSize: 24,
-      backgroundColor: 'lightgreen', // Cor de fundo verde claro
-      borderRadius: 10, // Raio da borda para torná-la arredondada
-      shadowColor: 'black', // Cor da sombra
-      shadowOffset: { width: 0, height: 2 }, // Deslocamento da sombra
-      shadowOpacity: 0.3, // Opacidade da sombra
-      shadowRadius: 4, // Raio da sombra
-      elevation: 2, // Sombreamento para Android
-      color: 'black', // Cor do texto
-      paddingBottom: 10, // Espaçamento na parte inferior
-      paddingHorizontal: 10, // Espaçamento horizontal
-      margin: 20, // Margem ao redor do componente
-      width: 350, // Aumento da largura para 300 (ajuste conforme necessário)
-      textAlign: 'center',
+      fontSize:17,
+      height: 50,
+      borderBottomWidth: 3,
+      borderColor: 'green',
+      marginBottom:50,
+      paddingHorizontal: 10,
+      color: '#fff',
+
 
     }
+
+
   });
 
