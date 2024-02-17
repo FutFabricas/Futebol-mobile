@@ -6,9 +6,14 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#242323',
-    justifyContent: 'center',
-    paddingHorizontal: 60,
+    
   },
+
+  icone:{
+    justifyContent: 'center',
+    marginHorizontal: 50
+  },
+
   titulo: {
     fontFamily: 'InterTitulos',
     fontSize: 32,
@@ -16,6 +21,7 @@ export const styles = StyleSheet.create({
     marginBottom: 100,
     textAlign: 'center'
   },
+
   input: {
     height: 40,
     borderBottomWidth: 5,
@@ -25,24 +31,27 @@ export const styles = StyleSheet.create({
     color: '#FFF',
   },
   botao: {
-    height: 40,
+    height: 55,
     borderRadius: 3,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#92C357',
     background: 'linear-gradient(to right, #92C357, #6FAF46)',
-    marginTop: 80,
+    marginTop: 20,
     borderRadius: 20
   },
+
   textoBotao: {
     color: '#FFF',
-    fontFamily: 'Roboto',
+    fontFamily: 'InterBold700',
   },
+
   botaoVoltar: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: 300,
-    marginTop: 30
+    marginTop: 30,
+    marginLeft: 20,
+    marginBottom: 35
+    
+    
   },
   
 });

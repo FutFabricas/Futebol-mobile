@@ -27,18 +27,18 @@ export default function TelaCadastro() {
 
 
   return (
-   
-
     <View style={estilosCadastro.container}>
+
       <View style={estilosCadastro.icone}>
         <TouchableOpacity style={estilosCadastro.botaoVoltar} onPress={() => navigation.goBack()}>
-          <Image source={require('../../../assets/img_voltarTelaFutMarcado.png')}/>
-        </TouchableOpacity>
+            <Image source={require('../../../assets/img_voltarTelaFutMarcado.png')}/>
+          </TouchableOpacity>
+      
+          <Text style={estilosCadastro.titulo}>Agende o FUT!</Text>
       </View>
-    
-      <View style={estilosCadastro.icone}>
-        <Text style={estilosCadastro.titulo}>Agende o FUT!</Text>
-        </View>
+        
+   
+    <View style={estilosCadastro.centralizar}>
 
         <TextInput
         style={estilosCadastro.input}
@@ -59,11 +59,9 @@ export default function TelaCadastro() {
          onPress={() => salvarLocaleHorario()}
          >
          <Text style={estilosCadastro.textoBotao}>Agendar FUT!</Text>
-        </Pressable>
-      
-  
-   
-    
+      </Pressable>
+      </View>
+
 
      </View>
      

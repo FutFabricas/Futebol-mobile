@@ -44,9 +44,8 @@ export default function TelaFutMarcado({route}) {
    }
    
 
-  return (
-  <ScrollView>
-                
+  return (  
+    <ScrollView>              
     <View style={estilosConfirmados.container}>
       
       <View style={estilosConfirmados.container}>
@@ -65,36 +64,32 @@ export default function TelaFutMarcado({route}) {
             <Image source={require('../../../assets/img_local.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>Local:</Text>
           </View>
-            <Text style={estilosConfirmados.textoInformativo2}>---{local}---</Text>
+            <Text style={estilosConfirmados.textoInformativo2}>({local})</Text>
             
             
            <View style={estilosConfirmados.icones}>
             <Image source={require('../../../assets/img_relogio.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>Dia e Horário:</Text>
           </View>
-            <Text style={estilosConfirmados.textoInformativo2}>---{horario}---</Text>
+            <Text style={estilosConfirmados.textoInformativo2}>({horario})</Text>
           <View style={estilosConfirmados.icones}>
             <Image source={require('../../../assets/img_dinheiro.png')}/>
-            <Text style={estilosConfirmados.textoInformativo}>R$ 20,00 - Por Pessoa</Text>
+            <Text style={estilosConfirmados.textoInformativo}>Valores:</Text>
           </View>
-            <Text style={estilosConfirmados.textoInformativo}></Text>
+          <Text style={estilosConfirmados.textoInformativo2}>R$ 130,00 (1hr) - Quadra-Brasil</Text>
+          <Text style={estilosConfirmados.textoInformativo2}>R$ 120,00 (1hr) - Quadra-Impacto</Text>
+
+
 
           <View style={estilosConfirmados.icones}>
             <Image source={require('../../../assets/img_jogadores.png')}/>
             <Text style={estilosConfirmados.textoInformativo}>Limite de 20 Jogadores!</Text>
           </View>
-            <Text style={estilosConfirmados.textoObs}> Observações: </Text>
-          <View style={estilosConfirmados.fundoObs}>
-            <Text style = {estilosConfirmados.textoCaixaOBS}>Texto do capitão</Text>
-          </View>
-
           <TouchableOpacity style={estilosConfirmados.botaoAdicionar} onPress={botaoAdicionarNome}>
             <Text style={estilosConfirmados.textoBotaoAdicionar}>Me coloque na lista!</Text>
-
           </TouchableOpacity>
-
         </View>
       </View>
     </ScrollView>
-  );
-}
+  )
+};

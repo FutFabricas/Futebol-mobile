@@ -6,41 +6,25 @@ export const estilosCadastro = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#242323',
-    justifyContent: 'center',
-  },
-
-
-  viewInputs:{
-    paddingHorizontal: 60,
-    justifyContent: 'center',
-    flexDirection: 'column'
+    alignItems: 'center'
   },
 
   icone: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    
   },
 
-  fundoObservacoes:{
-    marginHorizontal: 60,
-    backgroundColor: 'rgba(146, 195, 87, 0.3)',
-    height: 200,
-    borderRadius: 10,
-  },
 
-  textoObservacoes:{
-    color: '#FFF',
-    fontFamily: 'InterBold700',
-    textAlign: 'center'
+  centralizar: {
+    justifyContent:'center',
+    paddingHorizontal: 100
   },
-
 
   titulo: {
     fontFamily: 'InterTitulos',
-    fontSize: 26,
-    color: '#92C357',
-    marginBottom: 100,
-    marginTop: 50,
+    fontSize: 30,
+    color: '#fff',
+    marginBottom: 80,
+    marginTop: 80,
     textAlign: 'center'
   },
   input: {
@@ -64,14 +48,12 @@ export const estilosCadastro = StyleSheet.create({
     borderRadius: 20
   },
   textoBotao: {
-
     fontSize: 20,
     color: '#FFF',
     fontFamily: 'InterBold700',
   },
   botaoVoltar: {
-    top:40,
-    margin: 20,
+    top:20,
     marginRight: 300
   },
 });

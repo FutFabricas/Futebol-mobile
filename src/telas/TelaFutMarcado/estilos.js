@@ -9,21 +9,12 @@ export const estilosConfirmados = StyleSheet.create({
   },
 
   fundoInfo:{
-    marginVertical: 30,
+    marginVertical:20,
     justifyContent: 'center',
-    backgroundColor: '#28530C',
-    height: 820,
+    backgroundColor: 'rgba(180, 180, 184, .15)',
+    height: 600,
     width: 300,
     borderRadius: 20,
-
-  },
-
-  fundoObs: {
-    margin: 10,
-    backgroundColor: 'rgba(0, 0, 0, 0.3)',
-    height: 210,
-    width: 280, 
-    borderRadius: 50,
 
   },
 
@@ -42,12 +33,14 @@ export const estilosConfirmados = StyleSheet.create({
 
   textoInformativo: {
     fontSize: 18,
+    marginBottom:20,
     fontFamily: 'InterBold700',
     color: '#fff',
   },
 
   textoInformativo2:{
-    marginHorizontal: 60,
+    textAlign:'center',
+    marginBottom:20,
     fontSize: 16,
     fontFamily: 'InterRegular',
     color: '#fff',
@@ -63,27 +56,18 @@ export const estilosConfirmados = StyleSheet.create({
     color: '#fff',
   },
   
-  textoCaixaOBS:{
-    margin: 20,
-    justifyContent: 'center',
-    fontFamily: 'InterRegular',
-    fontSize: 16,
-    color: '#fff',
-
-  },
-
   botaoVoltar:{
     marginVertical: 20,
     marginRight: 300,
   },
 
   botaoAdicionar: {
-    margin: 25,
+    marginHorizontal:30,
     width: 250,
     height: 55,
     borderRadius: 25,
     // backgroundColor: '#789461',
-    backgroundColor: '#A4D767',
+    backgroundColor: '#92C357',
     justifyContent: 'center',
     alignItems: 'center',
 
@@ -93,11 +77,5 @@ export const estilosConfirmados = StyleSheet.create({
     fontFamily: 'InterBold700',
     fontSize: 20,
   },
-  textoConfirmados: {
-    fontFamily: 'Roboto',
-    fontSize: 16,
-    color: '#FFF',
-    marginBottom: 15,
-    bottom: 100
-  }
+  
 });
